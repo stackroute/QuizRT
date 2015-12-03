@@ -12,7 +12,7 @@ p{
     #button-height a{
      font-size:20px;
    }
-   .topicsinfo .badge{
+   .topicsinfo1 .badge{
      position: absolute;
      top:0;
      right:6px;
@@ -41,6 +41,15 @@ p{
       border-right: 1px pink solid;
       font-size: 15px;
     }
+    .topicsinfo1 .col-xs-2 .topic{
+
+      font-size: 9px;
+   }
+    .topicsinfo1 .col-xs-2 .wins{
+
+      font-size: 7px;
+      font-weight: bold;
+    }
  }
 @media(min-width:550px){
 
@@ -49,7 +58,7 @@ p{
   #button-height a{
    font-size:20px;
  }
- .topicsinfo .badge{
+ .topicsinfo1 .badge{
    position: absolute;
    top:0;
    right:13px;
@@ -63,6 +72,18 @@ p{
 
    color:white;
    padding-left: 140px;
+ }
+
+ .topicsinfo1 .col-xs-2 .topic{
+
+   font-size: 16px;
+   padding-left:2px;
+}
+ .topicsinfo1 .col-xs-2 .wins{
+
+   margin-left: 0;
+   font-size: 14px;
+   font-weight: bold;
  }
 
   #badge,#country
@@ -80,7 +101,10 @@ p{
    border-right: 1px  red solid;
    font-size: 20px;
  }
-}
+
+} /* end media queries */
+
+
 #Quizzer{
   background-color:red;
   text-align:center;
@@ -127,7 +151,7 @@ padding-top:5px;
   color:black;
 text-align: center;
 }
-.topicsinfo{
+.topicsinfo1{
   background-color: lightyellow;
   color:black;
 }
