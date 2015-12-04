@@ -8,7 +8,13 @@
     quizData=data;
   }).promise();
 
+  if(window.outerWidth > 1200){
+      $('body').css('height',620);
+  }
+  else{
   $('body').css('height',0.97*window.outerHeight);
+}
+
   $('.myRow').on('click', 'button',updateScore);
   $('.myRow').on('click', 'button', changeOptionColor);
 
@@ -94,13 +100,13 @@
     $('#questionInfoPanel img').remove();
 
     if(quizData.questions[questionCounter].image=='null'){
-      $('#questionInfoPanel h4').height('100%');
+      $('#questionInfoPanel h4').css('height','100%');
     }
     else{
       var createdImage=$('<img></img>').attr('src', quizData.questions[questionCounter].image);
       createdImage.appendTo($('#questionInfoPanel'));
-      $('#questionInfoPanel h4').addClass('questionText');
-      $('#questionInfoPanel img').addClass('questionImage');
+      $('#questionInfoPanel h4').addClass('questionText').css('height','28%');
+      $('#questionInfoPanel img').addClass('questionImage').css('height','72%');
     }
 
     $('.myOptions').remove();
@@ -133,7 +139,9 @@
 
   function updateScore(){
     var scoreBoard=$('#scoreBoard');
-
+    var totalScoreBoard = $('#myScore').offset();
+    var left_ = totalScoreBoard.left;
+    var top_ = totalScoreBoard.top+10;
     console.log($(this));
     if($(this).hasClass('correct-answer')){
       currentScore=10+currentTime;
@@ -145,8 +153,8 @@
         opacity: 1,
 
       },500).animate({
-        top: '4%',
-        left:'93%',
+        top: top_,
+        left:left_,
         'font-size': '10px'
       }, 700).animate({
         opacity: 0
@@ -169,8 +177,8 @@
         opacity: 1,
 
       },500).animate({
-        top: '4%',
-        left:'93%',
+        top: top_,
+        left:left_,
         'font-size': '10px'
       }, 700).animate({
         opacity: 0
