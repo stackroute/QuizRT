@@ -1,26 +1,36 @@
 (function(){
-  var currentTime=10,
-  questionCounter=0,
-  totalScore=0,
-  timer=$('#timer'),
-  quizData,
-  jsonOperation= $.getJSON('data/quiz.json',function(data){
-    quizData=data;
-  }).promise();
+  var timeLimit,
+      currentTime,
+      questionCounter=0,
+      totalScore=0,
+      timer=$('#timer'),
+      quizData,
+      jsonOperation= $.getJSON('data/quiz.json',function(data){
+          quizData=data;
+        }).promise();
+      jsonOperation2=$.getJSON('data/quizProperties.json', function(data){
+          timeLimit=data.timeLimit;
+          currentTime=data.timeLimit;
+      }).promise();
 
   $('body').css('height',0.97*window.outerHeight);
   $('.myRow').on('click', 'button',updateScore);
   $('.myRow').on('click', 'button', changeOptionColor);
 
-  jsonOperation.done(function(){
+  $.when(jsonOperation, jsonOperation2).done(function(){
+    console.log(typeof timeLimit);
     updateQuestion();
-    console.log(new Date().valueOf());
     runTimer();
+  });
+
+  // jsonOperation.done(function(){
+  //   updateQuestion();
+  //   console.log(new Date().valueOf());
+  //   runTimer();
 
     //  runTimer();
 
     // runTimer();
-  });
   // timerOperation.done(updateQuestion);
   // timerOperation.done(runTimer);
   // timerOperation.done(updateQuestion);
@@ -56,7 +66,7 @@
       if(currentTime<0)
       {
         clearInterval(a);
-        currentTime=10;
+        currentTime=timeLimit;
         if(questionCounter<quizData.questions.length)
         {
           console.log(new Date().valueOf());
