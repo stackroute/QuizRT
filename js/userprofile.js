@@ -51,11 +51,11 @@ function userdata(data)
       cols1.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
     }
     for(var i=tlen;i<6;i++){
-       cols1.eq(i).find('img').attr("src",'images/userProfileImages/add.png');
+       cols1.eq(i).find('img').attr("src",'images/userProfileImages/add.jpg');
 
     }
     for(var i=0;i<6;i++){
-      cols2.eq(i).find('img').attr("src",'images/userProfileImages/add.png');
+      cols2.eq(i).find('img').attr("src",'images/userProfileImages/add.jpg');
     }
 
   }
@@ -73,7 +73,7 @@ function userdata(data)
     cols2.eq(i-6).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
   for(var i=tlen;i<12;i++){
-    cols2.eq(i-6).find('img').attr("src",'images/userProfileImages/add.png');
+    cols2.eq(i-6).find('img').attr("src","images/userProfileImages/add.jpg");
   }
 }
 
