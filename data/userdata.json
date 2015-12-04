@@ -4,7 +4,7 @@
    "age":24,
    "imageLink":"images/user.png",
    "country":"India",
-   "flagLink":"images/indiaflag.png",
+   "flagLink":"images/userProfileImages/indiaflag.png",
    "badge":"Gyaani",
    "totalGames":50,
    "followers":30,
@@ -12,56 +12,56 @@
    "wins":20,
    "followedTopics":[{
     "topicName":"Cricket",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":17
   },
   {
     "topicName":"Indian History",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":23
   },
   {
     "topicName":"Indian Politics",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":34
   },
   {
     "topicName":"Indian Constitution",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":22
   },
   {
     "topicName":"Physics",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":2
   },
   {
     "topicName":"Chemistry ",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":12
   },
   {
     "topicName":"Mathematics ",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":33
   },
   {
     "topicName":"General Knowledge",
-    "topicImage":"images/followers.jpeg",
+    "topicImage":"images/userProfileImages/followers.jpeg",
     "gamesPlayed":10,
     "gamesWon":5,
     "level":27
@@ -73,9 +73,9 @@
 {
   "name":"Ayush",
   "age":23,
-  "imageLink":"images/user.png",
+  "imageLink":"images/userProfileImages/user.png",
   "country":"Australia",
-  "flagLink":"images/indiaflag.png",
+  "flagLink":"images/userProfileImages/indiaflag.png",
   "badge":"Turing Master",
   "totalGames":87,
   "followers":90,
@@ -84,21 +84,21 @@
   "followedTopics":[
     {
       "topicName":"Computer Science",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":45,
       "gamesWon":38,
       "level":43
     },
     {
       "topicName":"Indian Politics",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":15,
       "gamesWon":9,
       "level":3
     },
     {
       "topicName":"Who Am I",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":20,
       "gamesWon":13,
       "level":12
@@ -109,9 +109,9 @@
 {
   "name":"Rahul",
   "age":27,
-  "imageLink":"images/user.png",
+  "imageLink":"images/userProfileImages/user.png",
   "country":"USA",
-  "flagLink":"images/indiaflag.png",
+  "flagLink":"images/userProfileImages/indiaflag.png",
   "badge":"History Buff",
   "totalGames":57,
   "followers":70,
@@ -120,28 +120,28 @@
   "followedTopics":[
     {
       "topicName":"Indian History",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":45,
       "gamesWon":38,
       "level":63
     },
     {
       "topicName":"Chemistry",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":5,
       "gamesWon":2,
       "level":29
     },
     {
       "topicName":"Who Am I",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":10,
       "gamesWon":3,
       "level":16
     },
     {
       "topicName":"Football",
-      "topicImage":"images/followers.jpeg",
+      "topicImage":"images/userProfileImages/followers.jpeg",
       "gamesPlayed":9,
       "gamesWon":6,
       "level":22

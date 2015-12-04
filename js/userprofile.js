@@ -18,6 +18,7 @@ function userdata(data)
   var followers=data[0].followers;
   var following=data[0].following;
   var wins=data[0].wins;
+  var topics = data[0].followedTopics;
   var losses=totalGames-wins;
   var winpercentage=(wins/totalGames)*100;
   $('.container .user #UserName ').text(name);
@@ -38,7 +39,14 @@ function userdata(data)
   console.log(wins);
   console.log(losses);
   console.log(winpercentage);*/
-
-
+  //console.log(topics);
+  var cols = $('.topicsinfo1 .col-xs-2');
+  var tlen = topics.length;
+  for(var i=0;i<6;i++){
+    cols.eq(i).find('.topic').text(topics[i].topicName);
+    cols.eq(i).find('.badge').text(topics[i].level);
+    cols.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
+  }
+ //cols.eq(0).find('h4').text("asjdajskd");
 
 }
