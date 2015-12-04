@@ -1,0 +1,48 @@
+{
+  "quizId":"1",
+  "multiplier":3,
+"questions": [
+  {
+    "questionId":"1",
+    "question":"identify this famous personality",
+    "option1":"salman",
+    "option2":"amir",
+    "option3":"shahrukh",
+    "option4":"iman",
+    "correctIndex":4,
+    "image": "images/questionImages/imran.jpg"
+  },
+  {
+    "questionId":"2",
+    "question":"capital of india",
+    "option1":"delhi",
+    "option2":"mumbai",
+    "option3":"chennai",
+    "option4":"kolkata",
+    "option5": "sdsd",
+    "correctIndex":1,
+    "image": "images/questionImages/amir.jpg"
+  },
+  {
+    "questionId":"3",
+    "question":"capital of karnataka",
+    "option1":"madras",
+    "option2":"bangalore",
+    "option3":"guwahati",
+    "option4": "sdsa",
+    "option5": "aaaaaa",
+    "correctIndex":2,
+    "image": "images/questionImages/salman.jpg"
+  },
+  {
+    "questionId":"4",
+    "question":"Caption of Test Cricket India Team",
+    "option1":"Ganguli",
+    "option2":"Dhoni",
+    "option3":"Kohli",
+    "option4":"Sachin",
+    "correctIndex":3,
+    "image": "images/questionImages/srk.jpg"
+  }
+]
+}
