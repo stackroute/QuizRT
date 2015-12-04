@@ -17,8 +17,8 @@
       $('body').css('height',620);
   }
   else{
-  $('body').css('height',0.97*window.outerHeight);
-}
+    $('body').css('height',0.97*window.outerHeight);
+  }
 
   $('.myRow').on('click', 'button',updateScore);
   $('.myRow').on('click', 'button', changeOptionColor);
@@ -27,31 +27,6 @@
     updateQuestion();
     runTimer();
   });
-
-  // jsonOperation.done(function(){
-  //   updateQuestion();
-  //   console.log(new Date().valueOf());
-  //   runTimer();
-
-    //  runTimer();
-
-    // runTimer();
-  // timerOperation.done(updateQuestion);
-  // timerOperation.done(runTimer);
-  // timerOperation.done(updateQuestion);
-  // timerOperation.done(runTimer);
-  //timerOperation.done(updateQuestion);
-  //  timerOperation.done(updateQuestion);
-
-  // timerOperation=timerOperation.done(runTimer);
-  // timerOperation.done(runTimer);
-
-
-  // while(questionCounter<quizData.questions.length){
-  //   // timerOperation=runTimer();
-  //   // timerOperation.done(updateQuestion);
-  //   runTimer().done(updateQuestion);
-  //  }
 
   //Function definitions
   function delay(time){
@@ -82,28 +57,8 @@
     },1000);
   }
 
-  // function runTimer(){
-  //   var deferred= new $.Deferred(),
-  //       timer= $('#timer');
-  //   timer.text(currentTime--);
-  //   var displayTime=setInterval(function(){
-  //     timer.text(currentTime);
-  //     currentTime--;
-  //     if(currentTime<0){
-  //       clearInterval(displayTime);
-  //       currentTime=10;
-  //       deferred.resolve();
-  //     }
-  //   },1000);
-  //    return deferred.promise();
-  //    //updateQuestion();
-  // };
-
   function updateQuestion(){
-    // console.log('called');
-    // console.log(questionCounter);
     var optionCounter=1;
-    // console.log(quizData.questions[questionCounter].question);
     $('#questionInfoPanel h4 strong').text(quizData.questions[questionCounter].question);
 
     $('#questionInfoPanel img').remove();
@@ -133,17 +88,12 @@
       });
       if(optionCounter==quizData.questions[questionCounter].correctIndex) createdOption.addClass('correct-answer');
       else createdOption.addClass('wrong-answer');
-      // createdOption=$('<button></button>').text(data.questions[questionCounter]["option"+optionCounter]).id("option"+optionCounter).addClass('btn btn-1 btn-large btn-block');
       createdOption.appendTo(createdDiv);
       createdDiv.appendTo($('.myRow'));
-
       optionCounter++;
     }
-    // console.log(questionCounter);
     questionCounter++;
     setButtonHeight();
-    // delay(10000);
-    // console.log(questionCounter);
   };
 
   function updateScore(){
@@ -151,56 +101,45 @@
     var totalScoreBoard = $('#myScore').offset();
     var left_ = totalScoreBoard.left;
     var top_ = totalScoreBoard.top+10;
+    var optionColor;
 
     console.log($(this));
 
     if($(this).hasClass('correct-answer')){
-      currentScore=10+currentTime;
-      totalScore+=currentScore;
-      scoreBoard.css('color', 'green')
-      .text(currentScore);
-      scoreBoard.animate({
-        opacity: 1,
-      },500).animate({
-        top: top_,
-        left:left_,
-        'font-size': '10px'
-      }, 700).animate({
-        opacity: 0
-      },100, function(){
-        $('#myScore').text(totalScore);
-      }).animate({
-        top: '50%',
-        left: '45%',
-        'font-size': '50px'
-      }, 1);
+      questionScore=10+currentTime;
+      totalScore+=questionScore;
+      optionColor = "green";
     }
 
     else{
-      currentScore=-5;
-      totalScore+=currentScore;
-      scoreBoard.css('color', 'red')
-      .text(currentScore);
-      scoreBoard.animate({
-        opacity: 1,
-      },500).animate({
-        top: top_,
-        left:left_,
-        'font-size': '10px'
-      }, 700).animate({
-        opacity: 0
-      },100, function(){
-        $('#myScore').text(totalScore);
-      }).animate({
-        top: '50%',
-        left: '45%',
-        'font-size': '50px'
-      }, 1);
+      questionScore=-5;
+      totalScore+=questionScore;
+      optionColor = "red";
     }
-
-    console.log(totalScore);
+    animate(optionColor,totalScore,top_,left_,scoreBoard);
   };
 
+  function animate(optionColor,totalScore,top_,left_,scoreBoard){
+
+    scoreBoard.css('color', optionColor)
+    .text(questionScore);
+    scoreBoard.animate({
+      opacity: 1,
+    },500).animate({
+      top: top_,
+      left:left_,
+      'font-size': '10px'
+    }, 700).animate({
+      opacity: 0
+    },100, function(){
+      $('#myScore').text(totalScore);
+    }).animate({
+      top: '50%',
+      left: '45%',
+      'font-size': '50px'
+    }, 1);
+    console.log(totalScore);
+  };
   function changeOptionColor(){
     if($(this).hasClass('correct-answer')) $(this).addClass('btn-success');
     else{
@@ -218,6 +157,5 @@
     }
     totalOptions/=2;
     $('.myOptions').css('height',100/totalOptions+"%");
-
   };
 })();
