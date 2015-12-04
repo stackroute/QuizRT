@@ -1,0 +1,74 @@
+[
+  {
+   "name":"Lakshay",
+   "age":24,
+   "imageLink":"images/userProfileImages/user.png",
+   "country":"India",
+   "flagLink":"images/userProfileImages/indiaflag.png",
+   "badge":"MathWiz",
+   "totalGames":50,
+   "followers":30,
+   "following":40,
+   "wins":20,
+   "followedTopics":[{
+    "topicName":"Cricket",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":7,
+    "gamesWon":5,
+    "level":17
+  },
+  {
+    "topicName":"Indian History",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":4,
+    "gamesWon":2,
+    "level":23
+  },
+  {
+    "topicName":"Indian Politics",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":8,
+    "gamesWon":3,
+    "level":34
+  },
+  {
+    "topicName":"Indian Constitution",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":15,
+    "gamesWon":10,
+    "level":22
+  },
+  {
+    "topicName":"Physics",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":12,
+    "gamesWon":7,
+    "level":2
+  },
+  {
+    "topicName":"Chemistry ",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":9,
+    "gamesWon":3,
+    "level":12
+  },
+  {
+    "topicName":"Mathematics ",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":16,
+    "gamesWon":10,
+    "level":33
+  },
+  {
+    "topicName":"General Knowledge",
+    "topicImage":"images/userProfileImages/followers.jpeg",
+    "gamesPlayed":20,
+    "gamesWon":15,
+    "level":27
+  }
+],
+  "friends":["Arjun","Prakash","Mohit"]
+
+}
+
+]
