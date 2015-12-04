@@ -20,10 +20,9 @@ function userdata(data)
   var wins=data[0].wins;
   var topics = data[0].followedTopics;
   var losses=totalGames-wins;
-  var winpercentage=(wins/totalGames)*100;
+  var winpercentage=Math.round((wins/totalGames)*100);
   $('.container .user #UserName ').text(name);
   $('.container .user img').attr("src",imageLink);
-  $('.container .user #age ').text(age);
   $('.container .user #badge ').text(badge);
     $('.container .user #flag img').attr("src",flagLink);
   $('.container  .Followinfo .game span:nth-child(2)').text(totalGames);
@@ -41,23 +40,41 @@ function userdata(data)
   console.log(winpercentage);*/
   //console.log(topics);
   var cols1 = $('.topicsinfo1 .col-xs-2');
+  var cols2 = $('.topicsinfo2 .col-xs-2');
   var tlen = topics.length;
+  if(tlen<=6){
+
+    for(var i=0;i<tlen;i++){
+      cols1.eq(i).find('img').attr("src",topics[i].topicImage);
+      cols1.eq(i).find('.topic').text(topics[i].topicName);
+      cols1.eq(i).find('.badge').text(topics[i].level);
+      cols1.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
+    }
+    for(var i=tlen;i<6;i++){
+       cols1.eq(i).find('img').attr("src",'images/userProfileImages/add.png');
+
+    }
+    for(var i=0;i<6;i++){
+      cols2.eq(i).find('img').attr("src",'images/userProfileImages/add.png');
+    }
+
+  }
+  else if(tlen<=12){
   for(var i=0;i<6;i++){
     cols1.eq(i).find('img').attr("src",topics[i].topicImage);
     cols1.eq(i).find('.topic').text(topics[i].topicName);
     cols1.eq(i).find('.badge').text(topics[i].level);
     cols1.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
-  var cols2 = $('.topicsinfo2 .col-xs-2');
-  if(topics.length<12 )
-  {
-  for(var i=6;i<topics.length;i++){
+  for(var i=6;i<tlen;i++){
       cols2.eq(i-6).find('img').attr("src",topics[i].topicImage);
     cols2.eq(i-6).find('.topic').text(topics[i].topicName);
     cols2.eq(i-6).find('.badge').text(topics[i].level);
     cols2.eq(i-6).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
+  for(var i=tlen;i<12;i++){
+    cols2.eq(i-6).find('img').attr("src",'images/userProfileImages/add.png');
+  }
 }
- //cols.eq(0).find('h4').text("asjdajskd");
 
 }
