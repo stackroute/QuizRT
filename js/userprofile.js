@@ -39,6 +39,9 @@ function userdata(data)
   console.log(losses);
   console.log(winpercentage);*/
   //console.log(topics);
+  topics.sort(function(a,b){
+    return b.level - a.level;
+  })
   var cols1 = $('.topicsinfo1 .col-xs-2');
   var cols2 = $('.topicsinfo2 .col-xs-2');
   var tlen = topics.length;
