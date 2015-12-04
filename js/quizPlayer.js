@@ -18,7 +18,6 @@
   $('.myRow').on('click', 'button', changeOptionColor);
 
   $.when(jsonOperation, jsonOperation2).done(function(){
-    console.log(typeof timeLimit);
     updateQuestion();
     runTimer();
   });
@@ -69,7 +68,7 @@
         currentTime=timeLimit;
         if(questionCounter<quizData.questions.length)
         {
-          console.log(new Date().valueOf());
+          //console.log(new Date().valueOf());
           runTimer();
           updateQuestion();
         }
@@ -143,17 +142,15 @@
 
   function updateScore(){
     var scoreBoard=$('#scoreBoard');
-
     console.log($(this));
+
     if($(this).hasClass('correct-answer')){
       currentScore=10+currentTime;
       totalScore+=currentScore;
       scoreBoard.css('color', 'green')
       .text(currentScore);
-
       scoreBoard.animate({
         opacity: 1,
-
       },500).animate({
         top: '4%',
         left:'93%',
@@ -174,10 +171,8 @@
       totalScore+=currentScore;
       scoreBoard.css('color', 'red')
       .text(currentScore);
-
       scoreBoard.animate({
         opacity: 1,
-
       },500).animate({
         top: '4%',
         left:'93%',
