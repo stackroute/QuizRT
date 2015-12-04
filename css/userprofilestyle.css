@@ -19,6 +19,13 @@ p{
      width:20px;
      font-size: 8px;
    }
+   .topicsinfo2 .badge{
+     position: absolute;
+     top:0;
+     right:6px;
+     width:20px;
+     font-size: 8px;
+   }
    .Followinfo
    {
 
@@ -50,6 +57,15 @@ p{
       font-size: 7px;
       font-weight: bold;
     }
+    .topicsinfo2 .col-xs-2 .topic{
+
+      font-size: 9px;
+   }
+    .topicsinfo2 .col-xs-2 .wins{
+
+      font-size: 7px;
+      font-weight: bold;
+    }
  }
 @media(min-width:550px){
 
@@ -67,19 +83,38 @@ p{
    font-size: 18px;
 
  }
+ .topicsinfo2 .badge{
+   position: absolute;
+   top:0;
+   right:13px;
+   width:50px;
+   height: 25px;
+   font-size: 18px;
+
+ }
  .Followinfo
  {
 
    color:white;
    padding-left: 140px;
  }
-
  .topicsinfo1 .col-xs-2 .topic{
 
    font-size: 16px;
    padding-left:2px;
-}
+ }
  .topicsinfo1 .col-xs-2 .wins{
+
+   margin-left: 0;
+   font-size: 14px;
+   font-weight: bold;
+ }
+ .topicsinfo2 .col-xs-2 .topic{
+
+   font-size: 16px;
+   padding-left:2px;
+}
+ .topicsinfo2 .col-xs-2 .wins{
 
    margin-left: 0;
    font-size: 14px;
