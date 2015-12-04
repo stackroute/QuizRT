@@ -1,12 +1,17 @@
 (function(){
-  var currentTime=10,
-  questionCounter=0,
-  totalScore=0,
-  timer=$('#timer'),
-  quizData,
-  jsonOperation= $.getJSON('data/quiz.json',function(data){
-    quizData=data;
-  }).promise();
+  var timeLimit,
+      currentTime,
+      questionCounter=0,
+      totalScore=0,
+      timer=$('#timer'),
+      quizData,
+      jsonOperation= $.getJSON('data/quiz.json',function(data){
+          quizData=data;
+        }).promise();
+      jsonOperation2=$.getJSON('data/quizProperties.json', function(data){
+          timeLimit=data.timeLimit;
+          currentTime=data.timeLimit;
+      }).promise();
 
   if(window.outerWidth > 1200){
       $('body').css('height',620);
@@ -18,15 +23,19 @@
   $('.myRow').on('click', 'button',updateScore);
   $('.myRow').on('click', 'button', changeOptionColor);
 
-  jsonOperation.done(function(){
+  $.when(jsonOperation, jsonOperation2).done(function(){
     updateQuestion();
-    console.log(new Date().valueOf());
     runTimer();
+  });
+
+  // jsonOperation.done(function(){
+  //   updateQuestion();
+  //   console.log(new Date().valueOf());
+  //   runTimer();
 
     //  runTimer();
 
     // runTimer();
-  });
   // timerOperation.done(updateQuestion);
   // timerOperation.done(runTimer);
   // timerOperation.done(updateQuestion);
@@ -62,10 +71,10 @@
       if(currentTime<0)
       {
         clearInterval(a);
-        currentTime=10;
+        currentTime=timeLimit;
         if(questionCounter<quizData.questions.length)
         {
-          console.log(new Date().valueOf());
+          //console.log(new Date().valueOf());
           runTimer();
           updateQuestion();
         }
@@ -142,16 +151,16 @@
     var totalScoreBoard = $('#myScore').offset();
     var left_ = totalScoreBoard.left;
     var top_ = totalScoreBoard.top+10;
+
     console.log($(this));
+
     if($(this).hasClass('correct-answer')){
       currentScore=10+currentTime;
       totalScore+=currentScore;
       scoreBoard.css('color', 'green')
       .text(currentScore);
-
       scoreBoard.animate({
         opacity: 1,
-
       },500).animate({
         top: top_,
         left:left_,
@@ -172,10 +181,8 @@
       totalScore+=currentScore;
       scoreBoard.css('color', 'red')
       .text(currentScore);
-
       scoreBoard.animate({
         opacity: 1,
-
       },500).animate({
         top: top_,
         left:left_,

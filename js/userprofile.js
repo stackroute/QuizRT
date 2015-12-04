@@ -1,5 +1,5 @@
 
-$.getJSON("data/userdata.json",function(data){
+$.getJSON("data/raghav.json",function(data){
 
   console.log(typeof data);
   console.log(data);
@@ -39,6 +39,9 @@ function userdata(data)
   console.log(losses);
   console.log(winpercentage);*/
   //console.log(topics);
+  topics.sort(function(a,b){
+    return b.level - a.level;
+  })
   var cols1 = $('.topicsinfo1 .col-xs-2');
   var cols2 = $('.topicsinfo2 .col-xs-2');
   var tlen = topics.length;
@@ -75,6 +78,22 @@ function userdata(data)
     for(var i=tlen;i<12;i++){
       cols2.eq(i-6).find('img').attr("src","images/userProfileImages/add.jpg");
     }
+}
+else{
+
+  for(var i=0;i<6;i++){
+    cols1.eq(i).find('img').attr("src",topics[i].topicImage);
+    cols1.eq(i).find('.topic').text(topics[i].topicName);
+    cols1.eq(i).find('.badge').text(topics[i].level);
+    cols1.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
+  }
+  for(var i=6;i<11;i++){
+    cols2.eq(i-6).find('img').attr("src",topics[i].topicImage);
+    cols2.eq(i-6).find('.topic').text(topics[i].topicName);
+    cols2.eq(i-6).find('.badge').text(topics[i].level);
+    cols2.eq(i-6).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
+  }
+ cols2.eq(5).find('img').attr("src","images/userProfileImages/seeall.jpg");
   }
 
 }

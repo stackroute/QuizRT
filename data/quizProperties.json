@@ -1,0 +1,17 @@
+{
+  "timeLimit": 10,
+  "levels":[
+            {
+              "id": 1,
+              "minimumScore": 0
+            },
+            {
+                "id": 2,
+                "minimumScore": 200
+            },
+            {
+              "id": 3,
+              "minimumScore": 500
+            }
+            ]
+}
