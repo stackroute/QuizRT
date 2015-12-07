@@ -1,0 +1,42 @@
+.rank{
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.country{
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.p_name{
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+}
+.score{
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.head{
+  background-color: #B6B6B4;
+  height: 80px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #787878;
+  font-weight: bold;
+}
+
+.players{
+  background-color: #E5E4E2;
+  height: 80px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0px thin thin thin;
+  border-color: #787878;
+}
