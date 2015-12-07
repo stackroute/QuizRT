@@ -18,11 +18,17 @@
         "topicImage":"images/userProfileImages/followers.jpeg",
         "gamesPlayed":45,
         "gamesWon":38,
-        "level":63,
-        "exp":300
+<<<<<<< HEAD
+        "level":63
         },
           "CH1":
         {
+=======
+        "level":63,
+        "exp":300
+      },
+      {
+>>>>>>> 17489c60fe927b21f71809f53f26751ef0ea19a4
         "topicName":"Chemistry",
         "topicImage":"images/userProfileImages/followers.jpeg",
         "gamesPlayed":5,
