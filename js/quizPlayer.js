@@ -49,7 +49,6 @@
         currentTime=timeLimit;
         if(questionCounter<quizData.questions.length)
         {
-          //console.log(new Date().valueOf());
           runTimer();
           updateQuestion();
         }
@@ -103,7 +102,6 @@
     var top_ = totalScoreBoard.top+10;
     var optionColor;
 
-    console.log($(this));
 
     if($(this).hasClass('correct-answer')){
       questionScore=10+currentTime;
@@ -138,7 +136,6 @@
       left: '45%',
       'font-size': '50px'
     }, 1);
-    console.log(totalScore);
   };
   function changeOptionColor(){
     if($(this).hasClass('correct-answer')) $(this).addClass('btn-success');
