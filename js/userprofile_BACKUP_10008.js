@@ -98,6 +98,10 @@ else{
     cols2.eq(i-6).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
  cols2.eq(5).find('img').attr("src","images/userProfileImages/seeall.jpg");
+<<<<<<< HEAD
+ 
+}
+=======
 }*/
 
   for(var i=0;i<tlen;i++){
@@ -117,5 +121,6 @@ else{
 
   }
 
+>>>>>>> 28c885d6618064a4dd41f86edf950de860054b83
 
 }
