@@ -20,11 +20,14 @@ function userdata(data)
   var wins=data[0].wins;
   var topics = data[0].followedTopics;
   var losses=totalGames-wins;
+  var country=data[0].country;
   var winpercentage=Math.round((wins/totalGames)*100);
   $('.container .user #UserName ').text(name);
+  $('.container .user #age ').text(age);
   $('.container .user img').attr("src",imageLink);
   $('.container .user #badge ').text(badge);
   $('.container .user #flag img').attr("src",flagLink);
+  $('.container .user  #country').text(country);
   $('.container  .Followinfo .game span:nth-child(2)').text(totalGames);
   //console.log($('.container  .Followinfo .game span:nth-child(2)'));
   $('.container  .Followinfo .Followers span:nth-child(2)').text(followers);
