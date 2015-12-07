@@ -1,0 +1,47 @@
+.container{
+    height: 100%;
+}
+img-circle{
+  height: 50%;
+}
+.top-rankers{
+  height: 50%;
+}
+.my-rank{
+  height: 16.66%;
+}
+.top-rankers-list-group, .my-rank-list-group{
+  height: 90%;
+}
+.top-rankers-list-group a{
+  height: 33%;
+}
+.my-rank-list-group a{
+  height: 100%;
+}
+.result-text{
+  font-style: italic;
+  text-align: left;
+  font-variant: small-caps;
+  text-decoration: underline;
+}
+
+.top-rankers-list-group a img ,.my-rank-list-group a img{
+  height: 90%;
+  border-radius: 20%;
+}
+@media (min-width: 1200px) {
+  .container{
+      height: 100%;
+      border-style: solid;
+      border-width: medium;
+      border-color: #AAA;
+      background-color: #DDD;
+      width: 30%;
+      margin-left: 35%;
+      margin-right: 35%;
+      border-radius: 20px;
+      padding: 20px;
+  }
+
+}
