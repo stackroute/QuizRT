@@ -13,9 +13,19 @@
   var x=$('.navbar #heading-name');
   x.text(temp);
 
- for(i=0;i<9;++i)
+ for(i=0;i<l;++i)
  {
+
+  $(".topic-row").append('<div class="col-sm-4 topic"></div>');
+
+  $(".topic").eq(i).append('<div class="topic-icon col-xs-3"><img src="images/topics/cricket.png"></div><!--end topic-icon-->')
+
+ $(".topic").eq(i).append('<div class="topic-data col-xs-6"><span class="topic-name">Temple Run</span><span class="topic-desc">Try your Lucknow with this Delhightful quiz.</span></div><!--end topic-data--> ');
+
+ $(".topic").eq(i).append('<div class="topic-category col-xs-3"><a href=""><small>The world</small></a></div><!--end topic-category-->');
+
     var temp=data[i]["Topic Name"];
+
     var x=$('.topic-name').eq(i);
     x.text(temp);
 
@@ -30,9 +40,6 @@
     var src=data[i]["Topic Icon"];
     var x=$('img').eq(i);
     x.attr("src",src);
-
-
-
 
  }
   });
