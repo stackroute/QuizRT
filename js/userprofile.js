@@ -42,9 +42,13 @@ function userdata(data)
   topics.sort(function(a,b){
     return b.level - a.level;
   })
-  var cols1 = $('.topicsinfo1 .col-xs-2');
-  var cols2 = $('.topicsinfo2 .col-xs-2');
+  /*var cols1 = $('.topicsinfo1 .col-xs-2');
+  var cols2 = $('.topicsinfo2 .col-xs-2');*/
+  var cols = $('.topicholder');
   var tlen = topics.length;
+
+  /*   Previous complicated logic
+
   if(tlen<=6){
 
     for(var i=0;i<tlen;i++){
@@ -94,6 +98,24 @@ else{
     cols2.eq(i-6).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
  cols2.eq(5).find('img').attr("src","images/userProfileImages/seeall.jpg");
-}
+}*/
+
+  for(var i=0;i<tlen;i++){
+    cols.eq(i).find('img').attr("src",topics[i].topicImage);
+    cols.eq(i).find('.topic').text(topics[i].topicName);
+    cols.eq(i).find('.badge').text(topics[i].level);
+    cols.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
+  }
+  for(var i=tlen;i<11;i++){
+    cols.eq(i).find('img').attr("src","images/userProfileImages/add.jpg");
+  }
+  if(tlen<12){
+    cols.eq(11).find('img').attr("src","images/userProfileImages/add.jpg");
+  }
+  else{
+    cols.eq(11).find('img').attr("src","images/userProfileImages/seeall.jpg");
+
+  }
+
 
 }

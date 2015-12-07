@@ -13,7 +13,7 @@
   var x=$('.navbar #heading-name');
   x.text(temp);
 
- for(i=0;i<9;++i)
+ for(i=0;i<l;++i)
  {
     var temp=data[i]["Topic Name"];
     var x=$('.topic-name').eq(i);
