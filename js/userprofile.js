@@ -156,16 +156,87 @@ if(keysSorted.length>12){
 
   }
 */
+
 if(keysSorted.length>12)
 {
-  $(".topic-row").append('<div class="col-sm-4 topic"></div>');
+  var p=(keysSorted.length-12)/6;
+  var q=keysSorted.length%6;
+  if(q>0)
+  {
+  for( var j=0;j<=p;j++)
+  {
+    $(".newrows").append('<div class="row topicsinfo"></div>');
+  }
+  }
+  if(q==0)
+  {
+    for( var j=0;j<p;j++)
+    {
+      $(".newrows").append('<div class="row topicsinfo"></div>');
+    }
+  }
+  for(var j=0;j<p;j++)
+  {
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
 
-  $(".topic").eq(i).append('<div class="topic-icon col-xs-3"><img src="images/topics/cricket.png"></div><!--end topic-icon-->')
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
 
- $(".topic").eq(i).append('<div class="topic-data col-xs-6"><span class="topic-name">Temple Run</span><span class="topic-desc">Try your Lucknow with this Delhightful quiz.</span></div><!--end topic-data--> ');
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
 
- $(".topic").eq(i).append('<div class="topic-category col-xs-3"><a href=""><small>The world</small></a></div><!--end topic-category-->');
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
 
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
+
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
+
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
+
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
+
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
+
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
+
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+  $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
+
+  $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
+
+  $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+  $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+  $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+
+}
+if(q>0)
+{
+  for(var i=0;i<q;i++)
+  {
+    $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
+
+    $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
+
+    $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
+    $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
+    $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');
+
+  }
+}
+
+/*
     var temp=data[i]["Topic Name"];
 
     var x=$('.topic-name').eq(i);
@@ -182,7 +253,6 @@ if(keysSorted.length>12)
     var src=data[i]["Topic Icon"];
     var x=$('img').eq(i);
     x.attr("src",src);
+    */
 
-
-}
 }
