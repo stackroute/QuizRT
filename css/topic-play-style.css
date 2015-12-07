@@ -1,40 +1,64 @@
 .topic-name{
-  border:2px solid black;
   text-align: center;
 }
 .topic-description{
-  border:2px solid black;
   text-align: center;
 }
 
 .topic-column{
-  border:2px solid black;
   padding: 10px;
   }
 .topic-icon{
 
-  border:2px solid yellow;
   }
 
 .topic-icon img{
-  border-radius: 20px;
   margin: auto;
+  border-radius: 20px;
 }
 
 .level{
-  border:2px solid black;
 }
 
 .wins{
-  border:2px solid black;
 }
 
 .losses{
-  border:2px solid black;
 }
 
 .leaderboard{
   margin:5px 0;
+  padding: 0;
+  text-align: center;
+  border: 2px solid black;
+}
+.leaderboard label{
+  margin: 0;
+  padding: 0;
   font-size: 22px;
-  border:2px solid yellow;
+}
+
+.followers {
+  margin: 5px 0;
+  font-size: 20px;
+  text-align: center;
+}
+.number-followers{
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.follow{
+  text-align: left;
+}
+.followers button{
+  width:100%;
+}
+
+.play-button{
+}
+.play-button button{
+  width: 100%;
+  font-size: 22px;
+
 }
