@@ -1,5 +1,5 @@
 
-$.getJSON("data/raghav.json",function(data){
+$.getJSON("data/ayush.json",function(data){
 
   console.log(typeof data);
   console.log(data);

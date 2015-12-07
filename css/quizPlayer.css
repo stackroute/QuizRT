@@ -42,7 +42,7 @@ col-xs-12 img{
 body{
   background-color: #DDD;
   margin: 0px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .myRow{
   margin-top: 2%;
