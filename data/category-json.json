@@ -61,5 +61,42 @@
     "Topic ID": 37827,
     "Topic Category": "Sports",
     "Topic Description": "Cricket is back! Old is new and new is old"
+  },
+  {
+    "Topic Name": "Cricket Records and History",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports",
+    "Topic Description": "Have your baseball day with Quiz app"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/category1.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports",
+    "Topic Description": "Cricket is back! Old is new and new is old"
+  },
+  {
+    "Topic Name": "Baseball",
+    "Topic Icon": "images/topics/cricket.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports",
+    "Topic Description": "So you feel like u r a football freak.. Lets check it out"
+  },
+  {
+    "Topic Name": "Cricket Records & History",
+    "Topic Icon": "images/topics/animal.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports",
+    "Topic Description": "Have your baseball day with Quiz app"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/baseball.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports",
+    "Topic Description": "Cricket is back! Old is new and new is old"
   }
+
+
 ]
