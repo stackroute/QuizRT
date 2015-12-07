@@ -16,7 +16,8 @@
         "topicImage":"images/userProfileImages/followers.jpeg",
         "gamesPlayed":45,
         "gamesWon":38,
-        "level":63
+        "level":63,
+        "exp":300
       },
       {
         "topicName":"Chemistry",
