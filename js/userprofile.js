@@ -17,6 +17,8 @@ function userdata(data)
   var totalGames=data[0].totalGames;
   var followers=data[0].followers;
   var following=data[0].following;
+  var age=data[0].age;
+  var country=data[0].country;
   var wins=data[0].wins;
   var topics = data[0].followedTopics;
   var losses=totalGames-wins;
@@ -26,6 +28,8 @@ function userdata(data)
   $('.container .user #age ').text(age);
   $('.container .user img').attr("src",imageLink);
   $('.container .user #badge ').text(badge);
+  $('.container .user #age ').text(age);
+  $('.container .user #country ').text(country);
   $('.container .user #flag img').attr("src",flagLink);
   $('.container .user  #country').text(country);
   $('.container  .Followinfo .game span:nth-child(2)').text(totalGames);
