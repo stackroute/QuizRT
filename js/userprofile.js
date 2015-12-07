@@ -105,6 +105,9 @@ else{
 }*/
 
   for(var i=0;i<tlen;i++){
+    if(i>=11){
+      break;
+    }
     cols.eq(i).find('img').attr("src",topics[i].topicImage);
     cols.eq(i).find('.topic').text(topics[i].topicName);
     cols.eq(i).find('.badge').text(topics[i].level);
