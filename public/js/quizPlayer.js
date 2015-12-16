@@ -52,6 +52,9 @@
           runTimer();
           updateQuestion();
         }
+        else{
+          window.location.replace('/quizSummary');
+        }
       }
     },1000);
   }
