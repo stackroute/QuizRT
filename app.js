@@ -37,6 +37,12 @@ app.get('/leaderboard', function(req, res) {
   res.render('leaderboard');
 });
 
+app.get('/temp', function(req, res, next) {
+  console.log("passed");
+  next();
+});
+
+
 http.createServer(app).listen(3000, function() {
   console.log('App started for EJS testing!!');
 });

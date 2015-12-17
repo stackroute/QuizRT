@@ -1,20 +1,20 @@
 (function(){
   var timeLimit,
-      currentTime,
-      questionCounter=0,
-      totalScore=0,
-      timer=$('#timer'),
-      quizData,
-      jsonOperation= $.getJSON('data/quiz.json',function(data){
-          quizData=data;
-        }).promise();
-      jsonOperation2=$.getJSON('data/quizProperties.json', function(data){
-          timeLimit=data.timeLimit;
-          currentTime=data.timeLimit;
-      }).promise();
+  currentTime,
+  questionCounter=0,
+  totalScore=0,
+  timer=$('#timer'),
+  quizData,
+  jsonOperation= $.getJSON('data/quiz.json',function(data){
+    quizData=data;
+  }).promise();
+  jsonOperation2=$.getJSON('data/quizProperties.json', function(data){
+    timeLimit=data.timeLimit;
+    currentTime=data.timeLimit;
+  }).promise();
 
   if(window.outerWidth > 1200){
-      $('body').css('height',620);
+    $('body').css('height',620);
   }
   else{
     $('body').css('height',0.97*window.outerHeight);
@@ -53,6 +53,17 @@
           updateQuestion();
         }
         else{
+          $.ajax({
+            url: '/temp',
+            type: 'GET',
+            data: JSON.stringify(quizData),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            async: false,
+            success: function(msg) {
+              alert("hello");
+            }
+          });
           window.location.replace('/quizSummary');
         }
       }
