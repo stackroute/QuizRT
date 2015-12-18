@@ -6,15 +6,12 @@ var quizPlayer = require('./routes/quizData.js');
 // var querystring = require('querystring');
 // Set the view engine
 app.set('view engine', 'ejs');
-// Where to find the view files
 app.set('views', './views');
 app.use(express.static('./public'));
-// A route for the home page - will render a view
 app.get('/', function(req, res) {
   res.render('userprofile');
 });
 
-// A route for /say-hello - will render a view
 app.get('/topics-main', function(req, res) {
   res.render('topics-main');
 });
@@ -27,10 +24,6 @@ app.get('/category', function(req, res) {
 
 app.get('/topic-play', function(req, res) {
   res.render('topic-play');
-});
-
-app.get('/quizPlayer', function(req, res) {
-  res.render('quizPlayer');
 });
 
   app.get('/quizSummary', function(req, res) {
