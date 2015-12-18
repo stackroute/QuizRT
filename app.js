@@ -1,7 +1,7 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var quizPlayer = require('./routes/quizData.js');
+var quizPlayer = require('./routes/quizPlayerhandler.js');
 var topics-main=require('./routes/topics.js');
 var userprofile=require('./routes/userprofile.js');
 
