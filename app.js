@@ -2,6 +2,9 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var quizPlayer = require('./routes/quizData.js');
+var topics-main=require('./routes/topics.js');
+var userprofile=require('./routes/userprofile.js');
+
 // var url = require('url');
 // var querystring = require('querystring');
 // Set the view engine
@@ -17,7 +20,7 @@ app.get('/topics-main', function(req, res) {
 });
 
 app.use('/quizPlayer',quizPlayer);
-
+app.use('/topics',quizPlayer);
 app.get('/category', function(req, res) {
   res.render('category');
 });
