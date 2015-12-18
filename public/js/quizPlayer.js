@@ -5,13 +5,35 @@
   totalScore=0,
   timer=$('#timer'),
   quizData,
-  jsonOperation= $.getJSON('data/quiz.json',function(data){
+  // jsonOperation= $.getJSON('/quizData',function(data){
+  //   quizData=data;
+  // }).promise();
+  jsonOperation=$.ajax({
+  dataType: "json",
+  url: '/quizPlayer/quizData',
+  // data: data,
+  method: 'POST',
+  success: function(data){
     quizData=data;
-  }).promise();
-  jsonOperation2=$.getJSON('data/quizProperties.json', function(data){
+  }
+}).promise();
+
+
+  // jsonOperation2=$.getJSON('/quizProperties', function(data){
+  //   timeLimit=data.timeLimit;
+  //   currentTime=data.timeLimit;
+  // }).promise();
+
+  jsonOperation2=$.ajax({
+  dataType: "json",
+  url: '/quizPlayer/quizProperties',
+  // data: data,
+  method: 'POST',
+  success: function(data){
     timeLimit=data.timeLimit;
     currentTime=data.timeLimit;
-  }).promise();
+  }
+}).promise();
 
   if(window.outerWidth > 1200){
     $('body').css('height',620);
@@ -53,17 +75,7 @@
           updateQuestion();
         }
         else{
-          $.ajax({
-            url: '/temp',
-            type: 'GET',
-            data: JSON.stringify(quizData),
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'json',
-            async: false,
-            success: function(msg) {
-              alert("hello");
-            }
-          });
+          sendScoreToServer();
           window.location.replace('/quizSummary');
         }
       }
@@ -168,5 +180,23 @@
     }
     totalOptions/=2;
     $('.myOptions').css('height',100/totalOptions+"%");
+  };
+  function sendScoreToServer(){
+    var scoreTemp = $('#myScore').text();
+    var scr = {
+                "score":scoreTemp,
+                "name":"akshay"
+              };
+    $.ajax({
+      url: '/quizPlayer/submitresult',
+      type: 'GET',
+      data: scr,
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: true,
+      success: function(msg) {
+        console.log('data sent succesfully');
+      }
+    });
   };
 })();
