@@ -1,7 +1,7 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var quizPlayer = require('./routes/quizData.js');
+var quizPlayer = require('./routes/quizPlayerhandler.js');
 // var url = require('url');
 // var querystring = require('querystring');
 // Set the view engine
