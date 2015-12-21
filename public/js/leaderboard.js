@@ -12,6 +12,6 @@
       $('.country').eq(i+1).text(data[i]["country"]);
       $('.score').eq(i+1).text(data[i]["score"]);
       $('.p_name').eq(i+1).text(data[i]["player name"]);
-    }
+    }}
   });
 })();

@@ -11,21 +11,13 @@ var quizSummaryHandler = require('./routes/quizSummaryHandler.js');
 // Set the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
-app.use(express.static('./public'));
-app.get('/', function(req, res) {
-  res.render('userprofile');
-});
 
+app.use(express.static('./public'));
 
 app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
 app.use('/topicsHandler',topicsHandler);
-
-  app.use('/quizSummary',quizSummaryHandler);
-
-app.get('/leaderboard', function(req, res) {
-  res.render('leaderboard');
-});
+app.use('/quizSummary',quizSummaryHandler);
 
 
 
