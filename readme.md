@@ -15,9 +15,9 @@ Execution Steps
    e) sudo npm install express -g
    f) npm install ejs
    g) npm install supervisor
-8) Run supervisor app.js to run the app.
-9) Now app will start.
-10) Execute localhost:<host-port>/userProfile to run the app in your host browser.
+8. Run supervisor app.js to run the app.
+9. Now app will start.
+10. Execute localhost:<host-port>/userProfile to run the app in your host browser.
 
 
 About QuizRT
@@ -26,4 +26,3 @@ It is a Quiz app developed by  a team of six developers i.e. Ayush Jain, Lakshay
 
 
 So Have a Go and Enjoy this App.
-*********************************------------------------------------------------*********************************************************

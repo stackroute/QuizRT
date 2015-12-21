@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+//Change the names of json contents
 var contents = JSON.parse(fs.readFileSync('public/data/quiz.json'));
 var contents1 = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 
@@ -24,5 +25,7 @@ router.get('/', function(req, res, next) {
   res.render('quizPlayer')
 });
 
-
+router.get('/quizSummary', function(req, res, next) {
+  res.render('quizSummary')
+});
 module.exports = router;
