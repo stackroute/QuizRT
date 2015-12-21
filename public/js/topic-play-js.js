@@ -1,24 +1,22 @@
-(function(){$.getJSON( "data/topic-play-json.json", function( data ) {
-
+(function(){
+$.ajax({
+dataType: "json",
+url: '/topicsHandler/topicplaydata',
+// data: data,
+method: 'POST',
+success: function(data){
   var a=$('.topic-user').height();
   console.log(a);
-
   var b=$('.topic-icon img').height(a);
-
   var a=$('.leaderboard label').height();
   console.log(a);
-
   var b=$('.leaderboard img').height(a);
-
   var a=window.outerHeight;
   console.log("height="+a);
-
   var b=($('.topic-info').outerHeight());
   console.log(b);
   console.log(a-b);
-
   $('.play-button').height(0.9*(a-b));
-
   $('.play-button button').css('margin-top',0.1*(a-b));
 
   $('.play-button button').height((0.7)*(a-b));
@@ -44,10 +42,6 @@
   var c=data["Followers"];
   $('.follow span').text(c);
 
-
-
-
-
-
+}
 });
 })();

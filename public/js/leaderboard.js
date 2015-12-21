@@ -1,5 +1,10 @@
 (function (){
-  $.getJSON("data/leaderboard.json", function(data) {
+  $.ajax({
+  dataType: "json",
+  url: '/topicsHandler/leaderboarddata',
+  // data: data,
+  method: 'POST',
+  success: function(data) {
     var len = data.length;
     var i;
     for(i=0;i<len;++i){
