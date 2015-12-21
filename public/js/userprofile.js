@@ -1,11 +1,22 @@
 
-$.getJSON("data/ayush.json",function(data){
+$.ajax({
+dataType: "json",
+url: '/userProfile/profileData',
+// data: data,
+method: 'POST',
+success: function(data){
+
+  userdata(data);
+}
+})
+/*
+$.getJSON("data/profileData",function(data){
 
   console.log(typeof data);
   //console.log(data);
   userdata(data);
 });
-
+*/
 
 function userdata(data)
 {

@@ -1,7 +1,12 @@
 (function(){
 
   console.log("Hello");
-  $.getJSON( "data/category-json.json", function( data ) {
+  $.ajax({
+  dataType: "json",
+  url: '/topicsHandler/categorydata',
+  // data: data,
+  method: 'POST',
+  success: function(data) {
 
   console.log(data);
 

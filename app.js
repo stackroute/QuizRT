@@ -1,7 +1,11 @@
 var http = require('http');
 var express = require('express');
 var app = express();
-var quizPlayer = require('./routes/quizPlayerHandler.js');
+var quizPlayer = require('./routes/quizPlayerhandler.js');
+var topicsHandler=require('./routes/topicsHandler.js');
+var userProfile=require('./routes/profileHandler.js');
+var quizSummaryHandler = require('./routes/quizSummaryHandler.js');
+
 // var url = require('url');
 // var querystring = require('querystring');
 // Set the view engine
@@ -16,19 +20,11 @@ app.get('/topics-main', function(req, res) {
   res.render('topics-main');
 });
 
+app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
+app.use('/topicsHandler',topicsHandler);
 
-app.get('/category', function(req, res) {
-  res.render('category');
-});
-
-app.get('/topic-play', function(req, res) {
-  res.render('topic-play');
-});
-
-  app.get('/quizSummary', function(req, res) {
-    res.render('quizSummary');
-});
+  app.use('/quizSummary',quizSummaryHandler);
 
 app.get('/leaderboard', function(req, res) {
   res.render('leaderboard');

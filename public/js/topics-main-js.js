@@ -1,11 +1,14 @@
 (function(){
 
   console.log("Hello");
-  $.getJSON( "data/topics-main-json.json", function( data ) {
+  $.ajax({
+  dataType: "json",
+  url: '/topicsHandler/topicsmaindata',
+  // data: data,
+  method: 'POST',
+  success: function(data) {
 
   console.log(data);
-
-
   var l=data.length;
   //console.log(l);
 
