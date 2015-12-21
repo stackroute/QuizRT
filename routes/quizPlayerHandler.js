@@ -24,4 +24,7 @@ router.get('/', function(req, res, next) {
   res.render('quizPlayer')
 });
 
+router.get('/quizSummary', function(req, res, next) {
+  res.render('quizSummary')
+});
 module.exports = router;
