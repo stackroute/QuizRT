@@ -2,8 +2,8 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var quizPlayer = require('./routes/quizPlayerhandler.js');
-var topicsHandler=require('./routes/topicsHandler.js');
-var userProfile=require('./routes/profileHandler.js');
+var topicsHandler = require('./routes/topicsHandler.js');
+var userProfile = require('./routes/profileHandler.js');
 var quizSummaryHandler = require('./routes/quizSummaryHandler.js');
 
 // var url = require('url');
@@ -18,7 +18,6 @@ app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
 app.use('/topicsHandler',topicsHandler);
 app.use('/quizSummary',quizSummaryHandler);
-
 
 
 http.createServer(app).listen(3000, function() {

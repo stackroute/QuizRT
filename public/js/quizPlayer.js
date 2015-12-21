@@ -181,6 +181,7 @@
     totalOptions/=2;
     $('.myOptions').css('height',100/totalOptions+"%");
   };
+
   function sendScoreToServer(){
     var scoreTemp = $('#myScore').text();
     var scr = {
@@ -189,7 +190,7 @@
               };
     $.ajax({
       url: '/quizPlayer/submitresult',
-      type: 'GET',
+      type: 'GET',///should be post request
       data: scr,
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
@@ -199,4 +200,5 @@
       }
     });
   };
+
 })();
