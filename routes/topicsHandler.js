@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
-var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main-json.json'));
+var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main.json'));
 
-var topicplaydata = JSON.parse(fs.readFileSync('public/data/topics-main-json.json'));
+var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 
-var categorydata = JSON.parse(fs.readFileSync('public/data/category-json.json'));
+var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
 var leaderboarddata = JSON.parse(fs.readFileSync('public/data/leaderboard.json'));
 
 router.post('/topicsmaindata', function(req, res, next) {
