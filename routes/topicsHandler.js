@@ -26,7 +26,7 @@ router.post('/leaderboarddata', function(req, res, next) {
   res.json(leaderboarddata);
 });
 /* GET home page. */
-router.get('/topics-main',function(req, res, next) {
+router.get('/',function(req, res, next) {
   res.render('topics-main');
 });
 router.get('/topic-play',function(req, res, next) {

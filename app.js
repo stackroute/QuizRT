@@ -16,9 +16,6 @@ app.get('/', function(req, res) {
   res.render('userprofile');
 });
 
-app.get('/topics-main', function(req, res) {
-  res.render('topics-main');
-});
 
 app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
