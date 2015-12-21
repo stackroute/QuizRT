@@ -8,13 +8,13 @@ Execution Steps
 5. Now establish a secure connection with the ubuntu machine using vagrant ssh in gitbash.
 6. Move to the QuizRT directory inside the ubuntu machine.
 7. Run the  following commands to install nodejs,npm,node-static etc.
-  i. sudo apt-get install nodejs.
-  ii. sudo apt-get update
-  iii. sudo apt-get install npm
-  iv. sudo npm install node-static -g
-  v. sudo npm install express -g
-  vi. npm install ejs
-  vii. npm install supervisor
+  1. sudo apt-get install nodejs.
+  2. sudo apt-get update
+  3. sudo apt-get install npm
+  4. sudo npm install node-static -g
+  5. sudo npm install express -g
+  6. npm install ejs
+  7. npm install supervisor
 8. Run supervisor app.js to run the app.
 9. Now app will start.
 10. Execute localhost:<host-port>/userProfile to run the app in your host browser.
