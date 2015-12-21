@@ -22,7 +22,7 @@ Execution Steps
 
 About QuizRT
 
-It is a Quiz app developed by  a team of six developers i.e. Ayush Jain, Lakshay Bansal, Raghav Goel, Saurabh Gupta, Kshitiz Jain and  Akshay Meher during the  full stack developer training at NIIT StackRoute in Bengaluru. It is a multi player quiz app where multiple players can select their favourite topics, can create their profile and contest with different contestants from the world to play the quiz  in real time. The users will be ranked according to their scores calculated from the right answers as well as time taken by them to give the answers. Users will also get different badges according to their skills.
+It is a Quiz app developed by  a team of six developers i.e. Ayush Jain, Lakshay Bansal, Raghav Goel, Saurabh Gupta, Kshitij Jain and  Akshay Meher during the  full stack developer training at NIIT StackRoute in Bengaluru. It is a multi player quiz app where multiple players can select their favourite topics, can create their profile and contest with different contestants from the world to play the quiz  in real time. The users will be ranked according to their scores calculated from the right answers as well as time taken by them to give the answers. Users will also get different badges according to their skills.
 
 
 So Have a Go and Enjoy this App.
