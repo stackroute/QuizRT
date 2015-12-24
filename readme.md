@@ -1,3 +1,4 @@
+------------------------
 Execution Steps
 ------------------------
 
@@ -8,22 +9,22 @@ Execution Steps
 5. Now establish a secure connection with the ubuntu machine using vagrant ssh in gitbash.
 6. Move to the QuizRT directory inside the ubuntu machine.
 7. Run the  following commands to install nodejs,npm,node-static etc.
-   a) sudo apt-get install nodejs.
-   b) sudo apt-get update
-   c) sudo apt-get install npm
-   d) sudo npm install node-static -g
-   e) sudo npm install express -g
-   f) npm install ejs
-   g) npm install supervisor
-8) Run supervisor app.js to run the app.
-9) Now app will start.
-10) Execute localhost:<host-port>/userProfile to run the app in your host browser.
+  1. sudo apt-get install nodejs.
+  2. sudo apt-get update
+  3. sudo apt-get install npm
+  4. sudo npm install node-static -g
+  5. sudo npm install express -g
+  6. npm install ejs
+  7. npm install supervisor
+8. Run supervisor app.js to run the app.
+9. Now app will start.
+10. Execute localhost:<host-port>/userProfile to run the app in your host browser.
 
-
+------------------
 About QuizRT
+------------------
 
-It is a Quiz app developed by  a team of six developers i.e. Ayush Jain, Lakshay Bansal, Raghav Goel, Saurabh Gupta, Kshitiz Jain and  Akshay Meher during the  full stack developer training at NIIT StackRoute in Bengaluru. It is a multi player quiz app where multiple players can select their favourite topics, can create their profile and contest with different contestants from the world to play the quiz  in real time. The users will be ranked according to their scores calculated from the right answers as well as time taken by them to give the answers. Users will also get different badges according to their skills.
+It is a Quiz app developed by  a team of six developers i.e. Ayush Jain, Lakshay Bansal, Raghav Goel, Saurabh Gupta, Kshitij Jain and  Akshay Meher during the  full stack developer training at NIIT StackRoute in Bengaluru. It is a multi player quiz app where multiple players can select their favourite topics, can create their profile and contest with different contestants from the world to play the quiz  in real time. The users will be ranked according to their scores calculated from the right answers as well as time taken by them to give the answers. Users will also get different badges according to their skills.
 
 
 So Have a Go and Enjoy this App.
-*********************************------------------------------------------------*********************************************************

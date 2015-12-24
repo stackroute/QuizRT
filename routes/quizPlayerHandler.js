@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var fs = require('fs');
+<<<<<<< HEAD
 var Quiz;
 var quiz;
 var db;
@@ -26,6 +27,11 @@ db.once('open', function (callback) {
   Quiz = mongoose.model('Quiz', quizSchema,'quiz_questions_demo_collection');
 });
 
+=======
+//Change the names of json contents
+var contents = JSON.parse(fs.readFileSync('public/data/quiz.json'));
+var contents1 = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
+>>>>>>> 7cb2e591baf2b06293a4671e593939b00ee6f560
 
 router.post('/quizData', function(req, res, next) {
   Quiz.find(function(err,data){
@@ -52,5 +58,7 @@ router.get('/', function(req, res, next) {
   res.render('quizPlayer')
 });
 
-
+router.get('/quizSummary', function(req, res, next) {
+  res.render('quizSummary')
+});
 module.exports = router;
