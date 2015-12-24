@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var profileData = JSON.parse(fs.readFileSync('public/data/ayush.json'));
-
 router.post('/profileData', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
   res.json(profileData);
