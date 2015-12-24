@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main-json.json'));
 
-var topicplaydata = JSON.parse(fs.readFileSync('public/data/topics-main-json.json'));
+var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play-json.json'));
 
 var categorydata = JSON.parse(fs.readFileSync('public/data/category-json.json'));
 var leaderboarddata = JSON.parse(fs.readFileSync('public/data/leaderboard.json'));
