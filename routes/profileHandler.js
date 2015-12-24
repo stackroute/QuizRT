@@ -40,7 +40,6 @@ router.post('/profileData/:id', function(req, res, next) {
     Profile.findOne({userId: req.params.id})
           .exec(function(err,data){
             profileData = data;
-          //  res.setHeader('Content-Type', 'application/json');
             res.json(profileData);
           });
 });
@@ -49,7 +48,15 @@ router.post('/profileData/:id', function(req, res, next) {
 router.get('/:id',function(req, res, next) {
   var userId = req.params.id;
   console.log("This is from userprofie"+userId);
-  res.render('userprofile', {userId: userId});
+  Profile.findOne({userId: req.params.id})
+        .exec(function(err,data){
+          if(!data){
+          profileData = data;
+          res.render("fileNotFound");
+        }
+        res.render('userprofile', {userId: userId});
+        });
+
 });
 
 module.exports = router;

@@ -194,10 +194,7 @@
     $('.myOptions').css('height',100/totalOptions+"%");
   };
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 7cb2e591baf2b06293a4671e593939b00ee6f560
   function sendScoreToServer(){
     var scoreTemp = $('#myScore').text();
     var scr = JSON.stringify({
@@ -206,11 +203,7 @@
               });
     $.ajax({
       url: '/quizPlayer/submitresult',
-<<<<<<< HEAD
       type: 'POST',
-=======
-      type: 'GET',///should be post request
->>>>>>> 7cb2e591baf2b06293a4671e593939b00ee6f560
       data: scr,
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
@@ -223,8 +216,4 @@
     });
   };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cb2e591baf2b06293a4671e593939b00ee6f560
 })();
