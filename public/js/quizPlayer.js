@@ -50,6 +50,8 @@
     runTimer();
   });
 
+
+
   //Function definitions
   function delay(time){
     var d1= new Date();
@@ -58,6 +60,8 @@
       var d2 = new Date();
     }
   };
+
+
 
   function runTimer(){
     timer= $('#timer');
@@ -81,6 +85,8 @@
       }
     },1000);
   }
+
+
 
   function updateQuestion(){
     var optionCounter=1;
@@ -121,6 +127,9 @@
     setButtonHeight();
   };
 
+
+
+
   function updateScore(){
     var scoreBoard=$('#scoreBoard');
     var totalScoreBoard = $('#myScore').offset();
@@ -143,8 +152,8 @@
     animate(optionColor,totalScore,top_,left_,scoreBoard);
   };
 
-  function animate(optionColor,totalScore,top_,left_,scoreBoard){
 
+  function animate(optionColor,totalScore,top_,left_,scoreBoard){
     scoreBoard.css('color', optionColor)
     .text(questionScore);
     scoreBoard.animate({
@@ -163,6 +172,8 @@
       'font-size': '50px'
     }, 1);
   };
+
+
   function changeOptionColor(){
     if($(this).hasClass('correct-answer')) $(this).addClass('btn-success');
     else{
@@ -170,7 +181,8 @@
       $('.correct-answer').addClass('btn-success');
     }
     $('.myRow button').attr('disabled', 'disabled');
-  }
+  };
+
 
   function setButtonHeight(){
     var totalOptions = $('.myOptions').length;
@@ -181,22 +193,28 @@
     totalOptions/=2;
     $('.myOptions').css('height',100/totalOptions+"%");
   };
+
+
   function sendScoreToServer(){
     var scoreTemp = $('#myScore').text();
-    var scr = {
+    var scr = JSON.stringify({
                 "score":scoreTemp,
                 "name":"akshay"
-              };
+              });
     $.ajax({
       url: '/quizPlayer/submitresult',
-      type: 'GET',
+      type: 'POST',
       data: scr,
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
+      processdata: true,
+      crossDomain: true,
       async: true,
       success: function(msg) {
         console.log('data sent succesfully');
       }
     });
   };
+
+
 })();
