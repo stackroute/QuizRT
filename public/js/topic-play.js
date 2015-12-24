@@ -26,8 +26,9 @@ success: function(data){
   var c=data["Topic Description"];
   $('.topic-description h4').text(c);
   var src=data["Topic Icon"];
-  var x=$('.topic-icon img');
-  x.attr("src",src);
+  var x=$('.topic-icon')
+         .find('img');
+  console.log("byre "+x);
   var c=data["Topic Wins"];
   $('#numwins h3').text(c);
   console.log(c);

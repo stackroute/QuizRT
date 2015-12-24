@@ -13,7 +13,6 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.use(express.static('./public'));
-
 app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
 app.use('/topicsHandler',topicsHandler);
