@@ -202,11 +202,7 @@
               });
     $.ajax({
       url: '/quizPlayer/submitresult',
-
       type: 'POST',
-
-      type: 'GET',///should be post request
-
       data: scr,
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',

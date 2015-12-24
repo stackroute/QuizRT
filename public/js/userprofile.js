@@ -1,14 +1,13 @@
-
-$.ajax({
-  dataType: "json",
-  url: '/userProfile/profileData',
-    // data: data,
-  method: 'POST',
-  success: function(data){
-      userdata(data);
-    }
-})
-
+var loadUserProfile = function(name) {
+  $.ajax({
+    dataType: "json",
+    url: '/userProfile/profileData/' + name,
+    method: 'POST',
+    success: function(data){
+        userdata(data);
+      }
+  })
+};
 
 function userdata(data)
 {
@@ -128,13 +127,13 @@ for(i=0;i<keysSorted.length;i++)
   cols.eq(i).find('.wins').text(' ' + topics[keysSorted[i]].gamesWon +'/' + topics[keysSorted[i]].gamesPlayed);
 }
 for(var i=keysSorted.length;i<11;i++){
-  cols.eq(i).find('img').attr("src","images/userProfileImages/add.jpg");
+  cols.eq(i).find('img').attr("src","/images/userProfileImages/add.jpg");
 }
 if(keysSorted.length<=12){
-  cols.eq(11).find('img').attr("src","images/userProfileImages/add.jpg");
+  cols.eq(11).find('img').attr("src","/images/userProfileImages/add.jpg");
 }
 if(keysSorted.length>12){
-  cols.eq(11).find('img').attr("src","images/userProfileImages/seeall.jpg");
+  cols.eq(11).find('img').attr("src","/images/userProfileImages/seeall.jpg");
 
 }
 /*
