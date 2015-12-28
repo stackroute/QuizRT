@@ -5,24 +5,17 @@
   totalScore=0,
   timer=$('#timer'),
   quizData,
-  // jsonOperation= $.getJSON('/quizData',function(data){
-  //   quizData=data;
-  // }).promise();
+
   jsonOperation=$.ajax({
   dataType: "json",
   url: '/quizPlayer/quizData',
-  // data: data,
   method: 'POST',
   success: function(data){
     quizData=data;
   }
-}).promise();
+  }).promise();
 
 
-  // jsonOperation2=$.getJSON('/quizProperties', function(data){
-  //   timeLimit=data.timeLimit;
-  //   currentTime=data.timeLimit;
-  // }).promise();
 
   jsonOperation2=$.ajax({
   dataType: "json",
@@ -193,7 +186,6 @@
     totalOptions/=2;
     $('.myOptions').css('height',100/totalOptions+"%");
   };
-
 
   function sendScoreToServer(){
     var scoreTemp = $('#myScore').text();

@@ -8,7 +8,8 @@ var db;
 
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 
-router.use( bodyParser.json() );
+router.use(bodyParser.json());
+
 router.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -26,8 +27,8 @@ db.once('open', function (callback) {
       questions : []
     });
 
-
     Quiz = mongoose.model('Quiz', quizSchema,'quiz_questions_demo_collection');
+
 });
 
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
