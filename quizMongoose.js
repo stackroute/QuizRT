@@ -3,20 +3,15 @@ mongoose.connect('mongodb://localhost/quizRT');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
-
   console.log('connection open');
-
   var quizSchema = mongoose.Schema({
   quizId: {type:String, unique:true},
   multiplier: Number,
   questions : []
-
   },
   {strict:false}
 );
-
 var Quiz = mongoose.model('Quiz', quizSchema, "quiz_questions_demo_collection");
-
 var quiz1 = new Quiz({
   quizId: "3",
   multiplier: 3,
