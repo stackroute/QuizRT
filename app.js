@@ -6,8 +6,6 @@ var topicsHandler = require('./routes/topicsHandler.js');
 var userProfile = require('./routes/profileHandler.js');
 var quizSummaryHandler = require('./routes/quizSummaryHandler.js');
 
-// var url = require('url');
-// var querystring = require('querystring');
 // Set the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');

@@ -3,17 +3,15 @@ var fs = require('fs');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Profile;
-mongoose.connect('mongodb://localhost/quizRT');
-// var profileData = JSON.parse(fs.readFileSync('public/data/lakshay.json'));
 var profileData;
 
+mongoose.connect('mongodb://localhost/quizRT');
 var db = mongoose.connection;
-
 db.on('error', console.error.bind(console, 'connection error:'));
 
 db.once('open', function (callback) {
-
   console.log('connection open');
+
   var profileSchema = mongoose.Schema({
     userId: {type:String, unique:true},
     name:String,
@@ -30,8 +28,8 @@ db.once('open', function (callback) {
     friends:[]
   },{strict:false}
   );
-  Profile = mongoose.model('Profile2', profileSchema, "profile_collection");
 
+  Profile = mongoose.model('Profile2', profileSchema, "profile_collection");
 });
 
 router.post('/profileData/:id', function(req, res, next) {
@@ -55,7 +53,6 @@ router.get('/:id',function(req, res, next) {
         }
         res.render('userprofile', {userId: userId});
         });
-
 });
 
 module.exports = router;

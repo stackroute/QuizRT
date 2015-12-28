@@ -5,12 +5,13 @@ var fs = require('fs');
 var Quiz;
 var quiz;
 var db;
-// = JSON.parse(fs.readFileSync('public/data/quiz.json'));
+
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 
-router.use( bodyParser.json() );
+router.use(bodyParser.json());
+
 router.use(bodyParser.urlencoded({
-  extended: true
+  extended: true;
 }));
 
 var mongoose = require('mongoose');
@@ -25,7 +26,6 @@ db.once('open', function (callback) {
       multiplier: Number,
       questions : []
     });
-
 
     Quiz = mongoose.model('Quiz', quizSchema,'quiz_questions_demo_collection');
 });
