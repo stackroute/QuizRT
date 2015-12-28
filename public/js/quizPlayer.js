@@ -1,39 +1,32 @@
 (function(){
+
   var timeLimit,
   currentTime,
   questionCounter=0,
   totalScore=0,
   timer=$('#timer'),
   quizData,
-  // jsonOperation= $.getJSON('/quizData',function(data){
-  //   quizData=data;
-  // }).promise();
+
   jsonOperation=$.ajax({
-  dataType: "json",
-  url: '/quizPlayer/quizData',
-  // data: data,
-  method: 'POST',
-  success: function(data){
-    quizData=data;
-  }
-}).promise();
-
-
-  // jsonOperation2=$.getJSON('/quizProperties', function(data){
-  //   timeLimit=data.timeLimit;
-  //   currentTime=data.timeLimit;
-  // }).promise();
+    dataType: "json",
+    url: '/quizPlayer/quizData',
+    // data: data,
+    method: 'POST',
+    success: function(data){
+      quizData=data;
+    }
+  }).promise();
 
   jsonOperation2=$.ajax({
-  dataType: "json",
-  url: '/quizPlayer/quizProperties',
-  // data: data,
-  method: 'POST',
-  success: function(data){
-    timeLimit=data.timeLimit;
-    currentTime=data.timeLimit;
-  }
-}).promise();
+    dataType: "json",
+    url: '/quizPlayer/quizProperties',
+    // data: data,
+    method: 'POST',
+    success: function(data){
+      timeLimit=data.timeLimit;
+      currentTime=data.timeLimit;
+    }
+  }).promise();
 
   if(window.outerWidth > 1200){
     $('body').css('height',620);
@@ -50,19 +43,7 @@
     runTimer();
   });
 
-
-
   //Function definitions
-  function delay(time){
-    var d1= new Date();
-    var d2 = new Date();
-    while(d2.valueOf() < d1.valueOf() + time){
-      var d2 = new Date();
-    }
-  };
-
-
-
   function runTimer(){
     timer= $('#timer');
     timer.text(currentTime--);
@@ -85,8 +66,6 @@
       }
     },1000);
   }
-
-
 
   function updateQuestion(){
     var optionCounter=1;
@@ -127,9 +106,6 @@
     setButtonHeight();
   };
 
-
-
-
   function updateScore(){
     var scoreBoard=$('#scoreBoard');
     var totalScoreBoard = $('#myScore').offset();
@@ -137,13 +113,11 @@
     var top_ = totalScoreBoard.top+10;
     var optionColor;
 
-
     if($(this).hasClass('correct-answer')){
       questionScore=10+currentTime;
       totalScore+=questionScore;
       optionColor = "green";
     }
-
     else{
       questionScore=-5;
       totalScore+=questionScore;
@@ -151,7 +125,6 @@
     }
     animate(optionColor,totalScore,top_,left_,scoreBoard);
   };
-
 
   function animate(optionColor,totalScore,top_,left_,scoreBoard){
     scoreBoard.css('color', optionColor)
@@ -173,7 +146,6 @@
     }, 1);
   };
 
-
   function changeOptionColor(){
     if($(this).hasClass('correct-answer')) $(this).addClass('btn-success');
     else{
@@ -182,7 +154,6 @@
     }
     $('.myRow button').attr('disabled', 'disabled');
   };
-
 
   function setButtonHeight(){
     var totalOptions = $('.myOptions').length;
@@ -197,9 +168,9 @@
   function sendScoreToServer(){
     var scoreTemp = $('#myScore').text();
     var scr = JSON.stringify({
-                "score":scoreTemp,
-                "name":"akshay"
-              });
+      "score":scoreTemp,
+      "name":"akshay"
+    });
     $.ajax({
       url: '/quizPlayer/submitresult',
       type: 'POST',
