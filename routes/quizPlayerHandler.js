@@ -5,7 +5,7 @@ var fs = require('fs');
 var Quiz;
 var quiz;
 var db;
-// = JSON.parse(fs.readFileSync('public/data/quiz.json'));
+
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 
 router.use( bodyParser.json() );

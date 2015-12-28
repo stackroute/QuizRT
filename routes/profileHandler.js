@@ -32,7 +32,6 @@ db.once('open', function (callback) {
   },{strict:false}
   );
   Profile = mongoose.model('Profile2', profileSchema, "profile_collection");
-
 });
 
 router.post('/profileData/:id', function(req, res, next) {
