@@ -67,5 +67,16 @@
   <!-- <script type="text/javascript" src="bootstrap/js/modernizr-2.6.2.min.js"></script> -->
   <script type="text/javascript"  src="js/bootstrap.min.js"></script>
   <script type="text/javascript"  src="js/quizSummary.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io.connect('http://192.168.28:3000');
+      socket.on('connect', function(data) {
+          socket.emit('disjoin', 'Bye from client');
+          socket.on('messages', function(data) {
+                  console.log(data);
+          });
+      });
+  </script>
+
 </body>
 </html>

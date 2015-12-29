@@ -1,4 +1,4 @@
-(function(){
+function startGame(){
 
   var timeLimit,
   currentTime,
@@ -184,5 +184,5 @@
       }
     });
   };
-  
-})();
+
+};
