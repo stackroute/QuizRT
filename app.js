@@ -48,3 +48,12 @@ app.get('/testingSessions', function(req, res, next) {
 server.listen(3000, function() {
   console.log('App started for EJS testing!!');
 });
+
+io.on('connection', function(client) {
+    console.log('Client connected...');
+
+    client.on('join', function(data) {
+        console.log(data);
+        client.emit('messages', 'Hello from server');
+    });
+});
