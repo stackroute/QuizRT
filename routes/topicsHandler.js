@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-
+var topicsMain;
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/quizRT');
 db = mongoose.connection;
@@ -17,7 +17,7 @@ db.once('open', function (callback) {
       categoryTopics: Array
     });
 
-    var topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
+    topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
 
 });
 

@@ -57,11 +57,11 @@ io.on('connection', function(client) {
         client.emit('messages', 'Hello from server');
     });
     client.on('disjoin',function(data){
-      console.log("players connected = ");
+      console.log(data+" player disconnected");
     });
 
-    if(io.sockets.sockets.length <5){
-        client.emit('not_enough',"players not enought. waiting for "+(2 - io.sockets.sockets.length)+" players");
+    if(io.sockets.sockets.length <3){
+        io.sockets.emit('not_enough',"players not enough. waiting for "+(3 - io.sockets.sockets.length)+" more players");
     }
     else{
       io.sockets.emit("startGame","start the game");

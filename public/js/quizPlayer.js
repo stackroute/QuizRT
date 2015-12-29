@@ -1,3 +1,9 @@
+function playerNotEnough(data){
+console.log(data);
+console.log("meher");
+$('#questionInfoPanel h4 strong').text(data);
+};
+
 function startGame(){
 
   var timeLimit,
