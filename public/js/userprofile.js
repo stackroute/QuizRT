@@ -20,6 +20,7 @@ function userdata(data){
   var following=data.following;
   var wins=data.wins;
   var topics = data.followedTopics;
+  console.log(topics);
   console.log(typeof topics);
   var losses=totalGames-wins;
   var country=data.country;
@@ -40,38 +41,38 @@ function userdata(data){
   $('.container  #GamesInfo #winpercentage p').html("Win%"+"<br>"+winpercentage);
   var cols = $('.topicholder');
   var tlen = topics.length;
-  keysSorted = Object.keys(topics).sort(function(a,b){return topics[b].level-topics[a].level});
+  topics.sort(function(a,b){return b.level-a.level});
 
-  for(i=0;i<keysSorted.length;i++)
+  for(i=0;i<topics.length;i++)
   {
     if(i>=11){
       break;
     }
-    cols.eq(i).find('img').attr("src",topics[keysSorted[i]].topicImage);
-    console.log(topics[keysSorted[i]].topicImage);
-    cols.eq(i).find('.topic').text(topics[keysSorted[i]].topicName);
-    console.log(topics[keysSorted[i]].topicName);
-    cols.eq(i).find('.badge').text(topics[keysSorted[i]].level);
-    console.log(topics[keysSorted[i]].level);
-    cols.eq(i).find('.wins').text(' ' + topics[keysSorted[i]].gamesWon +'/' + topics[keysSorted[i]].gamesPlayed);
+    cols.eq(i).find('img').attr("src",topics[i].topicImage);
+    console.log(topics[i].topicImage);
+    cols.eq(i).find('.topic').text(topics[i].topicName);
+    console.log(topics[i].topicName);
+    cols.eq(i).find('.badge').text(topics[i].level);
+    console.log(topics[i].level);
+    cols.eq(i).find('.wins').text(' ' + topics[i].gamesWon +'/' + topics[i].gamesPlayed);
   }
 
-  for(var i=keysSorted.length;i<11;i++){
+  for(var i=topics.length;i<11;i++){
     cols.eq(i).find('img').attr("src","/images/userProfileImages/add.jpg");
   }
 
-  if(keysSorted.length<=12){
+  if(topics.length<=12){
     cols.eq(11).find('img').attr("src","/images/userProfileImages/add.jpg");
   }
 
-  if(keysSorted.length>12){
+  if(topics.length>12){
     cols.eq(11).find('img').attr("src","/images/userProfileImages/seeall.jpg");
   }
 
-  if(keysSorted.length>12)
+  if(topics.length>12)
   {
-    var p=(keysSorted.length-12)/6;
-    var q=keysSorted.length%6;
+    var p=(topics.length-12)/6;
+    var q=topics.length%6;
     if(q>0)
     {
       for( var j=0;j<=p;j++)

@@ -24,7 +24,7 @@ db.once('open', function (callback) {
     followers:Number,
     following:Number,
     wins:Number,
-    followedTopics:Object,
+    followedTopics:[],
     friends:[]
   },{strict:false}
   );

@@ -10,7 +10,6 @@
   jsonOperation=$.ajax({
     dataType: "json",
     url: '/quizPlayer/quizData',
-    // data: data,
     method: 'POST',
     success: function(data){
       quizData=data;
@@ -20,7 +19,6 @@
   jsonOperation2=$.ajax({
     dataType: "json",
     url: '/quizPlayer/quizProperties',
-    // data: data,
     method: 'POST',
     success: function(data){
       timeLimit=data.timeLimit;

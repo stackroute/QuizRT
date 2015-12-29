@@ -11,7 +11,7 @@ var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 router.use(bodyParser.json());
 
 router.use(bodyParser.urlencoded({
-  extended: true;
+  extended: true
 }));
 
 var mongoose = require('mongoose');
