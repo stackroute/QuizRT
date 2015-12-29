@@ -1,0 +1,196 @@
+[
+  {
+  "Category ID": 64733,
+  "Category Name": "Trending QuizUp Topics",
+  "Category Filter Criteria": "Top used places",
+  "Category Logo": "trend",
+  "Category Topics": [
+    {
+      "Topic Name": "Football",
+      "Topic Icon": "images/topics/football.png",
+      "Topic ID": 37827,
+      "Topic Category": "Sports"
+    },
+    {
+      "Topic Name": "Baseball",
+      "Topic Icon": "images/topics/baseball.png",
+      "Topic ID": 37827,
+      "Topic Category": "Sports"
+    },
+    {
+      "Topic Name": "Cricket Records & History",
+      "Topic Icon": "images/topics/cricket.png",
+      "Topic ID": 37827,
+      "Topic Category": "Sports"
+    },
+    {
+      "Topic Name": "Football",
+      "Topic Icon": "images/topics/football.png",
+      "Topic ID": 37827,
+      "Topic Category": "Sports"
+    },
+    {
+      "Topic Name": "Cricket Records and History",
+      "Topic Icon": "images/topics/cricket.png",
+      "Topic ID": 37827,
+      "Topic Category": "Sports"
+    }
+  ]
+},
+
+{
+"Category ID": 64733,
+"Category Name": "Trending QuizUp Topics",
+"Category Filter Criteria": "Top used places",
+"Category Logo": "images/topics/trend.jpeg",
+"Category Topics": [
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Baseball",
+    "Topic Icon": "images/topics/baseball.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Cricket Records & History",
+    "Topic Icon": "images/topics/cricket.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Hello World",
+    "Topic Icon": "images/topics/animal.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  }
+]
+},
+
+{
+"Category ID": 64733,
+"Category Name": "Trending QuizUp Topics",
+"Category Filter Criteria": "Top used places",
+"Category Logo": "trend.jpeg",
+"Category Topics": [
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Baseball",
+    "Topic Icon": "images/topics/baseball.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Cricket Records & History",
+    "Topic Icon": "images/topics/cricket.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Hello World",
+    "Topic Icon": "images/topics/animal.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  }
+]
+},
+
+{
+"Category ID": 64733,
+"Category Name": "Trending QuizUp Topics",
+"Category Filter Criteria": "Top used places",
+"Category Logo": "trend.jpeg",
+"Category Topics": [
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Baseball",
+    "Topic Icon": "images/topics/baseball.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Cricket Records & History",
+    "Topic Icon": "images/topics/cricket.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Hello World",
+    "Topic Icon": "images/topics/animal.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  }
+]
+},
+
+{
+"Category ID": 64733,
+"Category Name": "Trending QuizUp Topics",
+"Category Filter Criteria": "Top used places",
+"Category Logo": "trend.jpeg",
+"Category Topics": [
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Baseball",
+    "Topic Icon": "images/topics/baseball.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Cricket Records & History",
+    "Topic Icon": "images/topics/cricket.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Football",
+    "Topic Icon": "images/topics/football.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  },
+  {
+    "Topic Name": "Hello World",
+    "Topic Icon": "images/topics/animal.png",
+    "Topic ID": 37827,
+    "Topic Category": "Sports"
+  }
+]
+}
+]

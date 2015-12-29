@@ -2,15 +2,43 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 
-var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main.json'));
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/quizRT');
+db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
+db.once('open', function (callback) {
+
+    var topicsMainSchema = mongoose.Schema({
+      categoryId: {type:String, unique:true},
+      categoryName:String,
+      categoryFilterCriteria : String,
+      categoryLogo: String,
+      categoryTopics: Array
+    });
+
+    var topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
+
+});
+
+
+//var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main.json'));
+
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
 var leaderboarddata = JSON.parse(fs.readFileSync('public/data/leaderboard.json'));
 
 router.post('/topicsmaindata', function(req, res, next) {
-  res.setHeader('Content-Type', 'application/json');
-  res.json(topicsmaindata);
-});
+
+  topicsMain.find(function(err,data){
+    console.log(data);
+      if(err) console.log(err);
+      res.setHeader('Content-Type', 'application/json');
+      res.json(data);
+  });
+  });
+
+
 
 router.post('/topicplaydata', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');

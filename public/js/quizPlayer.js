@@ -19,7 +19,6 @@ function startGame(){
   jsonOperation2=$.ajax({
     dataType: "json",
     url: '/quizPlayer/quizProperties',
-    // data: data,
     method: 'POST',
     success: function(data){
       timeLimit=data.timeLimit;
