@@ -1,7 +1,7 @@
 fs = require('fs');
 
 
-fs.readFile('questions.json', 'utf8', function (err,data) {
+fs.readFile('questions2.json', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
   }
@@ -36,7 +36,7 @@ fs.readFile('questions.json', 'utf8', function (err,data) {
  var ques = new quesBank(json[i]);
  ques.save(function(err){
     if ( err ) console.log(err);
-    console.log("Ques Saved Successfully");
+    console.log("Ques "+i+" Saved Successfully");
  });
  }
  console.log('closing mongo');
