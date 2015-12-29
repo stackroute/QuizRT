@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
-var profileData = JSON.parse(fs.readFileSync('public/data/lakshay.json'));
+var profileData = JSON.parse(fs.readFileSync('public/data/ayush.json'));
 mongoose.connect('mongodb://localhost/quizRT');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

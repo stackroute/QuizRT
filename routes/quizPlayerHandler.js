@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var fs = require('fs');
-var Quiz;
+var Quiz = require("../models/quiz");
+
 var quiz;
-var db;
 
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 
@@ -13,23 +13,6 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({
   extended: true
 }));
-
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/quizRT');
-db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-
-db.once('open', function (callback) {
-
-    var quizSchema = mongoose.Schema({
-      quizId: {type:String, unique:true},
-      multiplier: Number,
-      questions : []
-    });
-
-    Quiz = mongoose.model('Quiz', quizSchema,'quiz_questions_demo_collection');
-
-});
 
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
 

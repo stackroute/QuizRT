@@ -2,7 +2,10 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var cookieParser = require('cookie-parser');
-var expressSession = require('express-session');
+var session = require('express-session');
+var mongoose = require('mongoose');
+var server = http.createServer(app);
+var io = require('socket.io')(server);
 
 
 var quizPlayer = require('./routes/quizPlayerhandler.js');
@@ -10,12 +13,19 @@ var topicsHandler = require('./routes/topicsHandler.js');
 var userProfile = require('./routes/profileHandler.js');
 var quizSummaryHandler = require('./routes/quizSummaryHandler.js');
 
+
+mongoose.connect('mongodb://localhost/quizRT');
+var db = mongoose.connection;
+
 // Set the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.use(cookieParser());
-app.use(expressSession({secret:'somesecrettokenhere'}));
+app.use(session({
+  secret: "ksjdfjkdsjkdsajfdskjfskdjf",
+  cookie: { maxAge: 3000 }
+}));
 
 app.use(express.static('./public'));
 app.use('/userProfile',userProfile);
@@ -24,17 +34,17 @@ app.use('/topicsHandler',topicsHandler);
 app.use('/quizSummary',quizSummaryHandler);
 
 app.get('/testingSessions', function(req, res, next) {
-  if(req.session.count){
-    res.send("testing sessions");
+  if(req.session.count >= 0){
+    req.session.count++;
+    res.send("testing sessions"+" "+req.session.count);
   }
   else{
-    req.sessions.count++;
-    res.send("testing sessions"+" "+req.sessions.count);
+    req.session.count = 0;
+    res.send("testing sessions"+" "+req.session.count);
   }
 
 });
 
-
-http.createServer(app).listen(3000, function() {
+server.listen(3000, function() {
   console.log('App started for EJS testing!!');
 });

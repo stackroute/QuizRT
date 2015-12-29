@@ -1,16 +1,17 @@
 .topic-name{
   text-align: center;
 }
+
 .topic-description{
   text-align: center;
 }
 
 .topic-column{
   padding: 10px;
-  }
-.topic-icon{
+}
 
-  }
+.topic-icon{
+}
 
 .topic-icon img{
   margin: auto;
@@ -32,6 +33,7 @@
   text-align: center;
   border: 2px solid black;
 }
+
 .leaderboard label{
   margin: 0;
   padding: 0;
@@ -43,22 +45,25 @@
   font-size: 20px;
   text-align: center;
 }
+
 .number-followers{
   text-align: left;
   margin: 0;
   padding: 0;
 }
+
 .follow{
   text-align: left;
 }
+
 .followers button{
   width:100%;
 }
 
 .play-button{
 }
+
 .play-button button{
   width: 100%;
   font-size: 22px;
-
 }

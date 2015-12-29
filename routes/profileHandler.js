@@ -5,31 +5,8 @@ var mongoose = require('mongoose');
 var Profile;
 var profileData;
 
-mongoose.connect('mongodb://localhost/quizRT');
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+var Profile = require("../models/profile");
 
-db.once('open', function (callback) {
-  console.log('connection open');
-
-  var profileSchema = mongoose.Schema({
-    userId: {type:String, unique:true},
-    name:String,
-    age:Number,
-    imageLink:String,
-    country:String,
-    flagLink:String,
-    badge:String,
-    totalGames:Number,
-    followers:Number,
-    following:Number,
-    wins:Number,
-    followedTopics:Object,
-    friends:[]
-  },{strict:false}
-  );
-  Profile = mongoose.model('Profile2', profileSchema, "profile_collection");
-});
 
 router.post('/profileData/:id', function(req, res, next) {
   console.log("this is form profile data"+req.params.id);
