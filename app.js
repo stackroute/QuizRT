@@ -27,6 +27,7 @@ app.use(session({
   cookie: { maxAge: 3000 }
 }));
 
+app.use(express.static('./public'));
 app.use('/userProfile',userProfile);
 app.use('/quizPlayer',quizPlayer);
 app.use('/topicsHandler',topicsHandler);
