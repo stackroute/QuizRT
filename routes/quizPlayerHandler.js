@@ -4,6 +4,10 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var Quiz = require("../models/quiz");
 
+//generate game id
+//register game with a gloabal variable
+//put the current id into EJS
+
 var quiz;
 
 var properties = JSON.parse(fs.readFileSync('public/data/quizProperties.json'));
@@ -20,7 +24,7 @@ router.post('/quizData', function(req, res, next) {
   Quiz.find(function(err,data){
       if(err) console.log(err);
       var rn = Math.floor((Math.random() * 3) + 0);
-      quiz=data[rn];
+      quiz=data[0];
       res.setHeader('Content-Type', 'application/json');
       res.json(quiz);
   });
@@ -40,7 +44,4 @@ router.get('/', function(req, res, next) {
   res.render('quizPlayer')
 });
 
-router.get('/quizSummary', function(req, res, next) {
-  res.render('quizSummary')
-});
 module.exports = router;

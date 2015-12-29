@@ -1,4 +1,4 @@
-(function(){
+(function setPage(){
 
   $.ajax({
     dataType: "json",
@@ -38,4 +38,4 @@
     }
 
   });
-})();
+}());

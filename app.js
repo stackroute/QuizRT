@@ -50,10 +50,20 @@ server.listen(3000, function() {
 });
 
 io.on('connection', function(client) {
-    console.log('Client connected...');
-
     client.on('join', function(data) {
         console.log(data);
+        console.log("players connected = ");
+        console.log(io.sockets.sockets.length);
         client.emit('messages', 'Hello from server');
     });
+    client.on('disjoin',function(data){
+      console.log("players connected = ");
+    });
+
+    if(io.sockets.sockets.length <5){
+        client.emit('not_enough',"players not enought. waiting for "+(2 - io.sockets.sockets.length)+" players");
+    }
+    else{
+      io.sockets.emit("startGame","start the game");
+    }
 });

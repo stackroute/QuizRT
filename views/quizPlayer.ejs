@@ -61,15 +61,19 @@
 <script type="text/javascript"  src="js/quizPlayer.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script>
-    var socket = io('http://localhost:3000');
+    var socket = io.connect('http://192.168.1.28:3000');
     socket.on('connect', function(data) {
         console.log("socket to client connected");
-        socket.emit('join', 'Hello World from client');
-        socket.on('messages', function(data) {
-                console.log(data);
-        });
+        socket.emit('join', 'Hi I am about to joining the game');
     });
 
+    socket.on('not_enough',function(data){
+      console.log(data);
+    });
+    socket.on('startGame', function(data){
+      console.log(data);
+      startGame();
+    });
 </script>
 </body>
 </html>
