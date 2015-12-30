@@ -4,9 +4,7 @@ var fs = require('fs');
 var topicsMain;
 var mongoose = require('mongoose');
 
-
  topicsMain = require("../models/topicsmain");
-
 
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
