@@ -13,7 +13,7 @@ var profileSchema = mongoose.Schema({
   followers:Number,
   following:Number,
   wins:Number,
-  followedTopics:Object,
+  followedTopics:[],
   friends:[]
 },{strict:false}
 );

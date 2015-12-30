@@ -1,10 +1,9 @@
 function playerNotEnough(data){
-console.log(data);
-console.log("meher");
-$('#questionInfoPanel h4 strong').text(data);
+
+  $('#questionInfoPanel h4 strong').text(data);
 };
 
-function startGame(){
+function startGame(name){
 
   var timeLimit,
   currentTime,
@@ -64,7 +63,7 @@ function startGame(){
           updateQuestion();
         }
         else{
-          sendScoreToServer();
+          sendScoreToServer(name);
           window.location.replace('/quizSummary');
         }
       }
@@ -169,11 +168,11 @@ function startGame(){
     $('.myOptions').css('height',100/totalOptions+"%");
   };
 
-  function sendScoreToServer(){
+  function sendScoreToServer(userId){
     var scoreTemp = $('#myScore').text();
     var scr = JSON.stringify({
       "score":scoreTemp,
-      "name":"akshay"
+      "name":userId
     });
     $.ajax({
       url: '/quizPlayer/submitresult',

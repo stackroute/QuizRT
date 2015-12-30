@@ -94,9 +94,7 @@ function userdata(data, user){
     for(var j=0;j<p;j++)
     {
       $(".topicsinfo").append('<div class="col-xs-2 topicholder"></div>');
-
       $(".topicholder").eq(i).append('<div> <a href="#"><img  class="img-rounded img-responsive" height="150px"></a></div><!--end topic-icon-->')
-
       $(".topicholder").eq(i).append('<div class="row"><div class="col-xs-12 col-sm-8"><span class="topic"></span></div>');
       $(".topicholder").eq(i).append('<div class="col-xs-12 col-sm-4"><span class="wins"></span></div>');
       $(".topicholder").eq(i).append('</div><span class="badge"></span></div>');

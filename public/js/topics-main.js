@@ -1,4 +1,9 @@
-(function(){
+var loadPlayPage = function(name) {
+  loadData();
+  $(".topicPlay").attr('href','/topicsHandler/topic-play/'+name);
+};
+
+function loadData(){
 
   $.ajax({
     dataType: "json",
@@ -19,6 +24,7 @@
         y=z.find($('.topic')).first();
         for(i=0;i<5;++i)
         {
+
           r=y.find('.topic-name');
           r.text(data[j]["Category Topics"][i]["Topic Name"]);
           r=y.find('.category-name');
@@ -33,4 +39,4 @@
     }
   });
 
-})();
+};

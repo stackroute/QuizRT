@@ -3,33 +3,16 @@ var router = express.Router();
 var fs = require('fs');
 var topicsMain;
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/quizRT');
-db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-
-db.once('open', function (callback) {
-
-    var topicsMainSchema = mongoose.Schema({
-      categoryId: {type:String, unique:true},
-      categoryName:String,
-      categoryFilterCriteria : String,
-      categoryLogo: String,
-      categoryTopics: Array
-    });
-
-    topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
-
-});
 
 
-//var topicsmaindata = JSON.parse(fs.readFileSync('public/data/topics-main.json'));
+ topicsMain = require("../models/topicsmain");
+
 
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
 var leaderboarddata = JSON.parse(fs.readFileSync('public/data/leaderboard.json'));
 
 router.post('/topicsmaindata', function(req, res, next) {
-
   topicsMain.find(function(err,data){
     console.log(data);
       if(err) console.log(err);
@@ -56,8 +39,9 @@ router.post('/leaderboarddata', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/topic-play',function(req, res, next) {
-  res.render('topic-play');
+router.get('/topic-play/:id',function(req, res, next) {
+  var userId = req.params.id;
+  res.render('topic-play',{userId: userId});
 });
 
 router.get('/category',function(req, res, next) {
@@ -69,7 +53,8 @@ router.get('/leaderboard',function(req, res, next) {
 });
 
 router.get('/:id',function(req, res, next) {
-  res.render('topics-main');
+  var userId = req.params.id;
+  res.render('topics-main',{userId: userId});
 });
 
 

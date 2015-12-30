@@ -3,7 +3,7 @@ var schema=
 {
   "type": "object",
   "properties": {
-    "userid":{
+    "userId":{
       "type":"integer",
       "minimum":0,
       "maximum":1000000
@@ -81,8 +81,7 @@ var schema=
           "maxlength":10
         },
         "topicName":{
-          "type": "string",
-          "faker": "lorem.words",
+          "type": "string"
         },
         "topicImage":
         {
@@ -131,7 +130,7 @@ var schema=
 
   },
   "required": [
-    "userid",
+    "userId",
     "name",
     "age",
     "imageLink",
@@ -147,4 +146,4 @@ var schema=
   ]
 }
 var sample=jsf(schema);
-console.log(sample);
+console.log(JSON.stringify(sample));

@@ -1,4 +1,5 @@
 fs = require('fs');
+var topicsMain = require('./models/topicsmain.js');
 
 
 fs.readFile('topics-main.json', 'utf8', function (err,data) {
@@ -9,22 +10,11 @@ fs.readFile('topics-main.json', 'utf8', function (err,data) {
 
   var mongoose = require('mongoose');
   mongoose.connect('mongodb://localhost/quizRT');
+
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', function (callback) {
    console.log('connection open');
-   var topicsMainSchema = mongoose.Schema({
-
-     categoryId: {type:String, unique:true},
-     categoryName:String,
-     categoryFilterCriteria : String,
-     categoryLogo: String,
-     categoryTopics: Array
- },{strict:false});
-
-
-
- var topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
 
 
  for(i=0;i<json.length;++i)

@@ -59,8 +59,8 @@ io.on('connection', function(client) {
       console.log(data+" player disconnected");
     });
 
-    if(io.sockets.sockets.length <3){
-        io.sockets.emit('not_enough',"players not enough. waiting for "+(3 - io.sockets.sockets.length)+" more players");
+    if(io.sockets.sockets.length <1){
+        io.sockets.emit('not_enough',"players not enough. waiting for "+(1 - io.sockets.sockets.length)+" more players");
     }
     else{
       io.sockets.emit("startGame","start the game");
