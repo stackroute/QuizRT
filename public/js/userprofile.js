@@ -4,12 +4,14 @@ var loadUserProfile = function(name) {
     url: '/userProfile/profileData/' + name,
     method: 'POST',
     success: function(data){
-      userdata(data);
+      userdata(data, name);
     }
   })
+
 };
 
-function userdata(data){
+function userdata(data, user){
+  var href = "/topicsHandler/"+user;
   var name=data.name;
   var age=data.age;
   var imageLink=data.imageLink;
@@ -20,11 +22,11 @@ function userdata(data){
   var following=data.following;
   var wins=data.wins;
   var topics = data.followedTopics;
-  console.log(topics);
-  console.log(typeof topics);
+
   var losses=totalGames-wins;
   var country=data.country;
   var winpercentage=Math.round((wins/totalGames)*100);
+  $("#topicHandler").attr('href',href);
   $('.container .user #UserName ').text(name);
   $('.container .user #age ').text(age);
   $('.container .user img').attr("src",imageLink);

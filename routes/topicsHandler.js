@@ -56,10 +56,6 @@ router.post('/leaderboarddata', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/',function(req, res, next) {
-  res.render('topics-main');
-});
-
 router.get('/topic-play',function(req, res, next) {
   res.render('topic-play');
 });
@@ -71,5 +67,10 @@ router.get('/category',function(req, res, next) {
 router.get('/leaderboard',function(req, res, next) {
   res.render('leaderboard');
 });
+
+router.get('/:id',function(req, res, next) {
+  res.render('topics-main');
+});
+
 
 module.exports = router;

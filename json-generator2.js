@@ -3,7 +3,7 @@ var schema=
 {
   "type": "object",
   "properties": {
-    "userid":{
+    "userId":{
       "type":"integer",
       "minimum":0,
       "maximum":1000000
@@ -131,7 +131,7 @@ var schema=
 
   },
   "required": [
-    "userid",
+    "userId",
     "name",
     "age",
     "imageLink",

@@ -52,8 +52,7 @@ server.listen(3000, function() {
 io.on('connection', function(client) {
     client.on('join', function(data) {
         console.log(data);
-        console.log("players connected = ");
-        console.log(io.sockets.sockets.length);
+        console.log("players connected = "+ io.sockets.sockets.length);
         client.emit('messages', 'Hello from server');
     });
     client.on('disjoin',function(data){
