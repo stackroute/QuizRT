@@ -13,14 +13,7 @@ fs.readFile('topics-main.json', 'utf8', function (err,data) {
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', function (callback) {
    console.log('connection open');
-   var topicsMainSchema = mongoose.Schema({
 
-     categoryId: {type:String, unique:true},
-     categoryName:String,
-     categoryFilterCriteria : String,
-     categoryLogo: String,
-     categoryTopics: Array
- },{strict:false});
 
 
 

@@ -19,16 +19,16 @@
         y=z.find($('.topic')).first();
         for(i=0;i<5;++i)
         {
-          console.log(i);
+
           r=y.find('.topic-name');
           r.text(data[j]["Category Topics"][i]["Topic Name"]);
           r=y.find('.category-name');
           r.text(data[j]["Category Topics"][i]["Topic Category"]);
           r=y.find('.topic-icon')
           .find('img');
-          console.log(r);
+
           var src=data[j]["Category Topics"][i]["Topic Icon"];
-          console.log(src);
+
           r.attr("src",src);
           y=y.next();
         }

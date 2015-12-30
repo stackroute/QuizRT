@@ -81,8 +81,7 @@ var schema=
           "maxlength":10
         },
         "topicName":{
-          "type": "string",
-          "faker": "lorem.words",
+          "type": "string"
         },
         "topicImage":
         {
