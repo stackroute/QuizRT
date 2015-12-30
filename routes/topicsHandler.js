@@ -3,9 +3,6 @@ var router = express.Router();
 var fs = require('fs');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/quizRT');
-db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
 var topicsmaindata = require("../models/topicsmain");
 
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
