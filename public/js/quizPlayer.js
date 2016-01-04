@@ -5,12 +5,12 @@ function playerNotEnough(data){
 
 function startGame(name){
 
-  var timeLimit,
-  currentTime,
-  questionCounter=0,
-  totalScore=0,
-  timer=$('#timer'),
-  quizData,
+  var timeLimit;
+  var currentTime;
+  var questionCounter=0;
+  var totalScore=0;
+  var timer=$('#timer');
+  var quizData;
 
   jsonOperation=$.ajax({
     dataType: "json",

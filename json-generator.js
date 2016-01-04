@@ -4,9 +4,9 @@ var schema=
   "type": "object",
   "properties": {
     "userId":{
-      "type":"integer",
-      "minimum":0,
-      "maximum":1000000
+      "type":"string",
+      "minLength":4,
+      "maxLength":4
     },
     "name": {
       "type": "string",
