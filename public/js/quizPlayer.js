@@ -1,11 +1,16 @@
-function startGame(){
+function playerNotEnough(data){
 
-  var timeLimit,
-  currentTime,
-  questionCounter=0,
-  totalScore=0,
-  timer=$('#timer'),
-  quizData,
+  $('#questionInfoPanel h4 strong').text(data);
+};
+
+function startGame(name){
+
+  var timeLimit;
+  var currentTime;
+  var questionCounter=0;
+  var totalScore=0;
+  var timer=$('#timer');
+  var quizData;
 
   jsonOperation=$.ajax({
     dataType: "json",
@@ -58,7 +63,7 @@ function startGame(){
           updateQuestion();
         }
         else{
-          sendScoreToServer();
+          sendScoreToServer(name);
           window.location.replace('/quizSummary');
         }
       }
@@ -163,11 +168,11 @@ function startGame(){
     $('.myOptions').css('height',100/totalOptions+"%");
   };
 
-  function sendScoreToServer(){
+  function sendScoreToServer(userId){
     var scoreTemp = $('#myScore').text();
     var scr = JSON.stringify({
       "score":scoreTemp,
-      "name":"akshay"
+      "name":userId
     });
     $.ajax({
       url: '/quizPlayer/submitresult',

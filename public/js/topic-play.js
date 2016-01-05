@@ -1,4 +1,8 @@
-(function setPage(){
+function loadPage(name){
+  $('#startGameButton').attr('href',"/quizPlayer/"+name);
+  setPage();
+};
+function setPage(){
 
   $.ajax({
     dataType: "json",
@@ -38,4 +42,4 @@
     }
 
   });
-}());
+};

@@ -1,4 +1,9 @@
-(function(){
+var loadPlayPage = function(name) {
+  loadData();
+  $(".topicPlay").attr('href','/topicsHandler/topic-play/'+name);
+};
+
+function loadData(){
 
   $.ajax({
     dataType: "json",
@@ -26,9 +31,7 @@
           r.text(data[j]["Category Topics"][i]["Topic Category"]);
           r=y.find('.topic-icon')
           .find('img');
-
           var src=data[j]["Category Topics"][i]["Topic Icon"];
-
           r.attr("src",src);
           y=y.next();
         }
@@ -36,4 +39,4 @@
     }
   });
 
-})();
+};

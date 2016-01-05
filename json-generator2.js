@@ -5,8 +5,8 @@ var schema=
   "properties": {
     "userId":{
       "type":"string",
-      "minLength":4,
-      "maxLength":4
+      "minlength":1,
+      "maxlength":1
     },
     "name": {
       "type": "string",
@@ -81,7 +81,8 @@ var schema=
           "maxlength":10
         },
         "topicName":{
-          "type": "string"
+          "type": "string",
+          "faker": "lorem.words",
         },
         "topicImage":
         {
@@ -116,16 +117,16 @@ var schema=
         "level"
       ]
     },
-    "minItems":2,
-    "maxItems":100
+    "minitems":2,
+    "maxitems":100
   },
     "friends": {
       "type": "array",
       "items":{
         "type":"string"
       },
-      "minItems":0,
-      "maxItems":1000
+      "minitems":0,
+      "maxitems":1000
     }
 
   },
@@ -146,4 +147,4 @@ var schema=
   ]
 }
 var sample=jsf(schema);
-console.log(JSON.stringify(sample));
+console.log(sample);

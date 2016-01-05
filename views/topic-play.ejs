@@ -107,7 +107,7 @@
 
     <div class="play-button">
       <div>
-        <a href="/quizPlayer" ><button class="btn-success" >Play ----></button></a>
+        <a id="startGameButton" href="/quizPlayer" ><button class="btn-success" >Play ----></button></a>
       </div>
 
     </div><!--end content-->
@@ -122,6 +122,9 @@
 
   <script src="/js/topic-play.js"></script>
 
+  <script>
+  $(document).ready(loadPage("<%= userId %>"));
+  </script>
 
 </body>
 </html>

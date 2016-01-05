@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-
+var topicsMain;
 var mongoose = require('mongoose');
-var topicsmaindata = require("../models/topicsmain");
+
+ topicsMain = require("../models/topicsmain");
 
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
@@ -36,12 +37,9 @@ router.post('/leaderboarddata', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/',function(req, res, next) {
-  res.render('topics-main');
-});
-
-router.get('/topic-play',function(req, res, next) {
-  res.render('topic-play');
+router.get('/topic-play/:id',function(req, res, next) {
+  var userId = req.params.id;
+  res.render('topic-play',{userId: userId});
 });
 
 router.get('/category',function(req, res, next) {
@@ -51,5 +49,11 @@ router.get('/category',function(req, res, next) {
 router.get('/leaderboard',function(req, res, next) {
   res.render('leaderboard');
 });
+
+router.get('/:id',function(req, res, next) {
+  var userId = req.params.id;
+  res.render('topics-main',{userId: userId});
+});
+
 
 module.exports = router;

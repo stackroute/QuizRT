@@ -10,6 +10,6 @@ var topicsMainSchema = mongoose.Schema({
   categoryTopics: Array
 },{strict:false});
 
- topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
+topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
 
 module.exports = topicsMain;
