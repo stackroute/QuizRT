@@ -126,6 +126,7 @@ function makeid()
 
     return text;
 };
+
 function game(gameId,arrayOfPlayers,isRunning){
   this.isRunning;
   this.gameId = gameId;
