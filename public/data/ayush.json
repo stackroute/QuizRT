@@ -7,10 +7,8 @@
     "flagLink":"/images/userProfileImages/indiaflag.png",
     "badge":"Turing Master",
     "totalGames":87,
-    "followers":90,
-    "following":95,
     "wins":67,
-    "followedTopics":
+    "topicsPlayed":
       [
 
         {
@@ -19,7 +17,7 @@
         "topicImage":"/images/userProfileImages/followers.jpeg",
         "gamesPlayed":45,
         "gamesWon":38,
-        "level":43
+        "level":3
       }
     ,
         {

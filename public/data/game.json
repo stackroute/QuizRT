@@ -1,0 +1,22 @@
+{
+  "gameId":"G1",
+  "quizId":"Q1",
+  "players":[
+    {
+      "id":"ay1",
+      "score":100,
+      "responses":["1","2","3","nil"],
+
+    },
+    {
+      "id":"ra1",
+      "score":100,
+      "responses":["1","2","3","nil"],
+    }
+    
+
+
+
+    ]
+
+}

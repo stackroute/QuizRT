@@ -3,7 +3,7 @@ var schema=
 {
   "type": "object",
   "properties": {
-    "userid":{
+    "userId":{
       "type":"integer",
       "minimum":0,
       "maximum":1000000
@@ -116,21 +116,21 @@ var schema=
         "level"
       ]
     },
-    "minitems":2,
-    "maxitems":100
+    "minItems":2,
+    "maxItems":100
   },
     "friends": {
       "type": "array",
       "items":{
         "type":"string"
       },
-      "minitems":0,
-      "maxitems":1000
+      "minItems":0,
+      "maxItems":1000
     }
 
   },
   "required": [
-    "userid",
+    "userId",
     "name",
     "age",
     "imageLink",
@@ -146,4 +146,4 @@ var schema=
   ]
 }
 var sample=jsf(schema);
-console.log(sample);
+console.log(JSON.stringify(sample,2));

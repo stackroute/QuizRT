@@ -1,6 +1,5 @@
 fs = require('fs');
 
-
 fs.readFile('topics-main.json', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
@@ -14,12 +13,7 @@ fs.readFile('topics-main.json', 'utf8', function (err,data) {
   db.once('open', function (callback) {
    console.log('connection open');
 
-
-
-
- var topicsMain = mongoose.model('topicsMain', topicsMainSchema, "topics_main_collection");
-
-
+topicsMain = require("../models/topicsmain");
  for(i=0;i<json.length;++i)
  {
  var category = new topicsMain(json[i]);
