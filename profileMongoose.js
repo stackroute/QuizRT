@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
-var profileData = JSON.parse(fs.readFileSync('public/data/kshitij.json'));
+var profileData = JSON.parse(fs.readFileSync('public/data/ayush.json'));
 mongoose.connect('mongodb://localhost/quizRT');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -17,11 +17,8 @@ db.once('open', function (callback) {
     flagLink:String,
     badge:String,
     totalGames:Number,
-    followers:Number,
-    following:Number,
     wins:Number,
-    followedTopics:[],
-    friends:[]
+    topicsPlayed:[]
   },
   {strict:false}
 );
@@ -36,11 +33,8 @@ db.once('open', function (callback) {
     flagLink : profileData.flagLink,
     badge : profileData.badge,
     totalGames : profileData.totalGames,
-    followers : profileData.followers,
-    following : profileData.following,
     wins : profileData.wins,
-    followedTopics : profileData.followedTopics,
-    friends : profileData.friends
+    topicsPlayed : profileData.topicsPlayed
   });
 
   profile1.save(function(err){

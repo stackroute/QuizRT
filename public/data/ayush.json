@@ -10,7 +10,6 @@
     "wins":67,
     "topicsPlayed":
       [
-
         {
           "topicId":"CS1",
         "gamesPlayed":45,
@@ -34,5 +33,7 @@
         "level":12,
          "isFollowed":1
       }
-    ]
+    ],
+    "questions":[],
+    "games":[]
   }

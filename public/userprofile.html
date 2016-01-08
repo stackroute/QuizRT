@@ -9,7 +9,7 @@
 	<!-- Mobile viewport optimized -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<!--<script src="/js/jquery-2.1.4.js"></script>-->
+	<script src="/js/jquery-2.1.4.js"></script>
 	<!-- Bootstrap CSS -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -31,15 +31,18 @@
 		</div>
 
 		<div class="row user">
+
 			<div class="col-xs-3">
-				<img ng-src="{{profile.data.imageLink}}"  width="120px" height="120px"  class="img-circle img-responsive pull-right">
+
+				<img src=""  width="120px" height="120px"  class="img-circle img-responsive pull-right">
 			</div>
 			<div class="col-xs-4 usermiddle">
-				<span id="UserName">{{profile.data.name}}
+				<span id="UserName">{{profile.data.userName}}
 				</span>
 				<span id="age">{{profile.data.age}}</span>
+
 				<div id="badge">{{profile.data.badge}}</div>
-				<span id="flag"><img ng-src="{{profile.data.flagLink}}" alt="user image" width="30px" height="30px" class="img-rounded">
+				<span id="flag"><img src="" alt="user image" width="30px" height="30px" class="img-rounded">
 				</span>
 				<span id="country">{{profile.data.country}}</span>
 
@@ -49,15 +52,15 @@
 
 				<div class="game">
 					<span>Games: </span>
-					<span>{{profile.data.totalGames}}</span>
+					<span></span>
 				</div>
 				<div class="Followers">
 					<span>Followers:  </span>
-					<span>23</span>
+					<span></span>
 				</div>
 				<div class="Following">
 					<span>Following: </span>
-					<span>58</span>
+					<span></span>
 				</div>
 
 			</div>
@@ -73,19 +76,19 @@
 			<div class="col-xs-2 col-xs-offset-1" id="win">
 				<img  src ="/images/userProfileImages/win.png" class="img-circle img-responsive" height="150px">
 
-				<p>Wins</br>{{profile.data.wins}}
+				<p>Wins</br>
 				</p>
 			</div>
 			<div class="col-xs-2 col-xs-offset-2" id="loss">
 				<img src ="/images/userProfileImages/loss.png" class="img-circle img-responsive" height="150px">
 
-				<p>Losses</br>{{profile.data.totalGames - profile.data.wins}}
+				<p>Losses</br>
 				</p>
 			</div>
 			<div class="col-xs-2 col-xs-offset-2" id="winpercentage">
 				<img  src ="/images/userProfileImages/winpercent.png" class="img-circle img-responsive" height="150px">
 
-				<p>Win%<br>{{profile.data.wins/profile.data.totalGames*100 | number : 2}}%
+				<p>Win%<br>
 				</p>
 			</div>
 		</div>
@@ -315,11 +318,16 @@
 
 	<script src="/js/libs/bootstrap.min.js"></script>
 
-	<script src = "/js/libs/angular.min.js"></script>
 
 	<!-- Custom JS -->
 	<!-- <script src="/js/userprofile.js"></script> -->
   <script src="/js/controllers/profileController/profileController.js"></script>
+	<script src = "/js/libs/angular.min.js"></script>
 
+	<!--
+	<script>
+	$(document).ready(loadUserProfile("<%= userId %>"));
+	</script>
+-->
 </body>
 </html>
