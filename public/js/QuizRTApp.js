@@ -8,7 +8,11 @@ app.config(function($routeProvider){
 			templateUrl: 'topicsmain.html',
 			controller: 'topicsmainController'
 		});
-
+     .when('/userprofile',
+   {
+     templateUrl:'userprofile.html',
+     controller:'profileController'
+   });
 });
 
 
