@@ -1,5 +1,4 @@
-
-  {
+{
     "userId":"RA1",
     "name":"Raghav",
     "age":27,
@@ -11,123 +10,125 @@
     "wins":27,
     "topicsPlayed":
     [
-
         {
-        "topicId":"IH1",
+        "topicId":"38923",
         "gamesPlayed":45,
         "gamesWon":38,
         "level":63,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":500
         },
         {
-        "topicId":"CH1",
+        "topicId":"38923",
         "gamesPlayed":5,
         "gamesWon":2,
         "level":29,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":100
         },
         {
-        "topicId":"WAI1",
+        "topicId":"38923",
         "gamesPlayed":10,
         "gamesWon":3,
         "level":16,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":800
         },
-
         {
-        "topicId":  "FO1",
+        "topicId":  "38923",
         "gamesPlayed":9,
         "gamesWon":6,
         "level":22,
-          "isFollowed":1
+          "isFollowed":1,
+           "points":100
         },
-
         {
-       "topicId":  "CR1",
+       "topicId":  "38923",
        "gamesPlayed":7,
        "gamesWon":5,
        "level":17,
-       "isFollowed":1
+       "isFollowed":1,
+        "points":800
         },
-
         {
-       "topicId":"IP1",
+       "topicId":"38923",
        "gamesPlayed":8,
        "gamesWon":3,
        "level":34,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":800
         },
-
         {
-       "topicId": "IC1",
+       "topicId": "38923",
        "gamesPlayed":15,
        "gamesWon":10,
        "level":22,
         "isFollowed":1
         },
-
         {
-       "topicId":"PH1",
+       "topicId":"38923",
        "gamesPlayed":12,
        "gamesWon":7,
        "level":2,
-       "isFollowed":1
+       "isFollowed":1,
+        "points":800
         },
-
         {
-        "topicId":"GK1",
+        "topicId":"38923",
        "gamesPlayed":20,
        "gamesWon":15,
        "level":27,
-       "isFollowed":1
+       "isFollowed":1,
+        "points":800
         },
-
         {
-        "topicId":"TV1",
+        "topicId":"38923",
        "gamesPlayed":22,
        "gamesWon":13,
        "level":27,
         "isFollowed":1
         },
-
         {
-        "topicId": "CR2",
+        "topicId": "38923",
        "gamesPlayed":120,
        "gamesWon":102,
        "level":54,
-       "isFollowed":1
+       "isFollowed":1,
+        "points":600
         },
-
         {
-        "topicId": "MY1",
+        "topicId": "38923",
        "gamesPlayed":21,
        "gamesWon":10,
        "level":7,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":200
         },
-
         {
-        "topicId":"NC1",
+        "topicId":"38923",
        "gamesPlayed":70,
        "gamesWon":55,
        "level":25,
-       "isFollowed":1
+       "isFollowed":1,
+        "points":500
         },
-
         {
-        "topicId": "WH1",
+        "topicId": "38923",
        "gamesPlayed":200,
        "gamesWon":159,
        "level":78,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":200
         },
-
         {
-        "topicId": "GOT1",
+        "topicId": "38923",
        "gamesPlayed":80,
        "gamesWon":65,
        "level":29,
-        "isFollowed":1
+        "isFollowed":1,
+         "points":800
         }
-   ]
-  }
+   ],
+   "questions":["Q1","Q2","Q3"],
+   "games":["G1","G2","G3"]
+}

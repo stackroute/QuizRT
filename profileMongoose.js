@@ -8,34 +8,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
 
   console.log('connection open');
-  var profileSchema = mongoose.Schema({
-    userId: {type:String, unique:true},
-    name:String,
-    age:Number,
-    imageLink:String,
-    country:String,
-    flagLink:String,
-    badge:String,
-    totalGames:Number,
-    wins:Number,
-    topicsPlayed:[]
-  },
-  {strict:false}
-);
 
-  var Profile = mongoose.model('Profile2', profileSchema, "profile_collection");
-  var profile1 = new Profile({
-    userId : profileData.userId,
-    name : profileData.name,
-    age : profileData.age,
-    imageLink : profileData.imageLink,
-    country : profileData.country,
-    flagLink : profileData.flagLink,
-    badge : profileData.badge,
-    totalGames : profileData.totalGames,
-    wins : profileData.wins,
-    topicsPlayed : profileData.topicsPlayed
-  });
+var Profile = require("./models/profile.js");
+
+  var profile1 = new Profile(profileData);
 
   profile1.save(function(err){
     if ( err ) console.log(err);

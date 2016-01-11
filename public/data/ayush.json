@@ -1,4 +1,4 @@
-  {
+{
     "userId":"AY1",
     "name":"Ayush",
     "age":23,
@@ -11,29 +11,32 @@
     "topicsPlayed":
       [
         {
-          "topicId":"CS1",
+          "topicId":"38923",
         "gamesPlayed":45,
         "gamesWon":38,
         "level":3,
-         "isFollowed":1
+         "isFollowed":1,
+         "points":100
       }
     ,
         {
 
-        "topicId":"IP1",
+        "topicId":"38923",
         "gamesPlayed":15,
         "gamesWon":9,
         "level":3,
-         "isFollowed":1
+         "isFollowed":1,
+         "points":200
       },
           {
-        "topicId":"WAI1",
+        "topicId":"38923",
         "gamesPlayed":20,
         "gamesWon":13,
         "level":12,
-         "isFollowed":1
+         "isFollowed":1,
+         "points":300
       }
     ],
-    "questions":[],
-    "games":[]
-  }
+    "questions":["Q1","Q2","Q3"],
+    "games":["G1","G2","G3"]
+}

@@ -1,5 +1,4 @@
-
-  {
+{
     "userId":"LA1",
    "name":"Lakshay",
    "age":24,
@@ -12,62 +11,72 @@
    "topicsPlayed":
     [
             {
-              "topicId":"CR1",
+              "topicId":"38923",
               "gamesPlayed":7,
               "gamesWon":5,
               "level":17,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":200
             },
             {
-              "topicId": "IH1",
+              "topicId": "38923",
               "gamesPlayed":4,
               "gamesWon":2,
               "level":23,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":300
             },
             {
-              "topicId":"IP1",
+              "topicId":"38923",
               "gamesPlayed":8,
               "gamesWon":3,
               "level":34,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":400
             },
             {
-              "topicId":"IC1",
+              "topicId":"38923",
               "gamesPlayed":15,
               "gamesWon":10,
               "level":22,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":500
             },
             {
-              "topicId":"PH1",
+              "topicId":"38923",
               "gamesPlayed":12,
               "gamesWon":7,
               "level":2,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":600
             },
 
             {
-              "topicId":"CH1",
+              "topicId":"38923",
               "gamesPlayed":9,
               "gamesWon":3,
               "level":12,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":250
             },
             {
-              "topicId":"MA1",
+              "topicId":"38923",
               "gamesPlayed":16,
               "gamesWon":10,
               "level":33,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":100
             },
 
             {
-              "topicId":  "GK1",
+              "topicId":  "38923",
               "gamesPlayed":20,
               "gamesWon":15,
               "level":27,
-               "isFollowed":1
+               "isFollowed":1,
+               "points":800
             }
-      ]
+      ],
+      "questions":["Q1","Q2","Q3"],
+      "games":["G1","G2","G3"]
 }
