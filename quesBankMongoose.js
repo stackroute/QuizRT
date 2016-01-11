@@ -39,6 +39,7 @@ fs.readFile('questions2.json', 'utf8', function (err,data) {
     console.log("Ques "+i+" Saved Successfully");
  });
  }
+ 
  console.log('closing mongo');
  //mongoose.disconnect();
  });//end once
