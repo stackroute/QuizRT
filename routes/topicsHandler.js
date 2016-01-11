@@ -1,23 +1,33 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var topicsMain;
 var mongoose = require('mongoose');
 
- topicsMain = require("../models/topicsmain");
+var Category = require("../models/topicsmain");
 
 var topicplaydata = JSON.parse(fs.readFileSync('public/data/topic-play.json'));
 var categorydata = JSON.parse(fs.readFileSync('public/data/category.json'));
 var leaderboarddata = JSON.parse(fs.readFileSync('public/data/leaderboard.json'));
 
-router.post('/topicsmaindata', function(req, res, next) {
+/*router.post('/topicsmaindata', function(req, res, next) {
   topicsMain.find(function(err,data){
     console.log(data);
       if(err) console.log(err);
       res.setHeader('Content-Type', 'application/json');
       res.json(data);
   });
-  });
+});*/
+
+router.get('/topicsmain',function(req,res,data){
+
+  Category.find(function(err, categories){
+			if(err){
+				return res.send(500, err);
+			}
+			return res.send(categories);
+		});
+
+});
 
 
 

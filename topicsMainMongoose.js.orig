@@ -15,6 +15,11 @@ fs.readFile('topics-main.json', 'utf8', function (err,data) {
   db.once('open', function (callback) {
    console.log('connection open');
 
+<<<<<<< HEAD
+topicsMain = require("../models/topicsmain");
+=======
+
+>>>>>>> ba270d37b63237351cc972a97dc78691d72a795a
  for(i=0;i<json.length;++i)
  {
  var category = new topicsMain(json[i]);

@@ -1,0 +1,31 @@
+Quiz
+{
+quizid:"",
+multiplier:"",
+questions:
+[
+questionsid 1,
+questionid 2
+]
+}
+
+Profile
+//remove followers
+//remove following
+//Remove followed topics and make it topics played
+//refer topics from that json and add a boolean for follow and total points
+//add questions in topics
+//questionAnswered:[all questions ids that he attepmted]
+//"level":method(exp,topicID) // this method to be descibe in mongo
+//remove friends
+//add array of gameids
+
+Game.JSON
+Added game.JSON
+
+topics or topicplay
+ ///Add a array of category ids here
+ //Remove topic wins,losses,level,level percentage
+
+category or topicsmain
+//Only Topic id is required in the category topics array

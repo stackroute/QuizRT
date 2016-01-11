@@ -1,6 +1,6 @@
 {
   "quizId":"1",
-  "multiplier":3,
+  "multiplier":3,     //refer the questions by question id and remove
 "questions": [
   {
     "questionId":"1",
