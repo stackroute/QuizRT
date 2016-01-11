@@ -15,13 +15,6 @@ app.config(function($routeProvider){
    });
 });
 
-
 app.factory('categoryService', function($resource){
 	return $resource('/api/topicsmain/:id');
-});
-
-app.controller('topicmainController',function($scope){
-
-  $scope.categories=categoryService.query();
-
 });
