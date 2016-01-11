@@ -1,149 +1,46 @@
 var jsf = require('json-schema-faker');
 var schema=
 {
-  "type": "object",
-  "properties": {
-    "userId":{
-      "type":"string",
-      "minLength":4,
-      "maxLength":4
-    },
-    "name": {
-      "type": "string",
-      "faker": "name.findName"
-    },
-    "age":{
-      "type":"integer",
-      "minimum":1,
-      "maximum":80
-    },
-    "imageLink":
+    "type":"array",
+    "items":
     {
-      "type":"string",
-      "faker":"image.avatar"
-    },
-    "country":
-    {
-      "type":"string",
-      "faker":"address.country"
-    },
+      "type":"object",
+     "properties": {
+      "topicID": {
+        "type": "string",
+      },
+      "topicName":{
+        "type":"string",
+        "faker": "name.findName"
+      },
+      "topicIcon":
+      {
+        "type":"string",
+        "faker":"image.avatar"
+      },
+      "topicCategory":
+      {
+        "type":"string",
+        "faker": "name.findName"
+      },
 
-    "flagLink":
-    {
-      "type":"string",
-      "faker":"image.avatar"
-    },
-    "badge":
-    {
-      "type":"array",
-      "items":
+      "topicDescription":
       {
-        "enum":["computer-master","turin-master","shaana"]
+        "type":"string",
       },
-      "minitems":1,
-      "maxitems":1
-    },
-    "totalGames":
-    {
-      "type":"integer",
-      "minimum":0,
-      "maximum":"100000"
-    },
-    "followers":
-    {
-      "type":"integer",
-      "minimum":0,
-      "maximum":"100000"
-    },
-    "following":
-    {
-      "type":"integer",
-      "minimum":0,
-      "maximum":"100000"
-    },
-    "wins":
-    {
-      "type":"integer",
-      "minimum":0,
-      "maximum":"100000"
-    },
-    "followedtopics":
-    {
-      "type":"array",
-      "items":
+
+      "noOfFollowers":
       {
-       "type":"object",
-      "properties": {
-        "topicId":
-        {
-          "type":"string",
-          "minlength":6,
-          "maxlength":10
-        },
-        "topicName":{
-          "type": "string"
-        },
-        "topicImage":
-        {
-          "type":"string",
-          "faker":"image.imageUrl"
-        },
-        "gamesPlayed":
-        {
-          "type":"integer",
-          "minimum":0,
-          "maximum":500
-        },
-        "gamesWon":
-        {
-          "type":"integer",
-          "minimum":0,
-          "maximum":500
-        },
-        "level":
-        {
-          "type":"integer",
-          "minimum":0,
-          "maximum":500
-        }
-      },
-      "required": [
-        "topicId",
-        "topicName",
-        "topicImage",
-        "gamesplayed",
-        "gamesWon",
-        "level"
-      ]
-    },
-    "minItems":2,
-    "maxItems":100
-  },
-    "friends": {
-      "type": "array",
-      "items":{
-        "type":"string"
-      },
-      "minItems":0,
-      "maxItems":1000
+        "type":"integer",
+      }
     }
+    },
+  "minitems":200,
+  "maxitems":300
+};
 
-  },
-  "required": [
-    "userId",
-    "name",
-    "age",
-    "imageLink",
-    "country",
-    "flagLink",
-    "badge",
-    "totalGames",
-    "followers",
-    "following",
-    "wins",
-    "followedtopics",
-    "friends"
-  ]
-}
+
+
+
 var sample=jsf(schema);
 console.log(JSON.stringify(sample));
