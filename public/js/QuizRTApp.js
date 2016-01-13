@@ -4,10 +4,14 @@ app.config(function($routeProvider){
 
   $routeProvider
 		//the timeline display
-		.when('/topicsmain', {
-			templateUrl: 'topicsmain.html',
-			controller: 'topicsmainController'
-		});
+		// .when('/topicsmain', {
+		// 	templateUrl: 'topicsmain.html',
+		// 	controller: 'topicsmainController'
+		// })
+
+    .when('/quizPlayer',{
+      'templateUrl':'quizPlayer.html'
+    });
 
 });
 

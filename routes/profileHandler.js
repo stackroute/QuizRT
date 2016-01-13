@@ -40,7 +40,7 @@ router.get('/',function(req, res, next) {
           profileData = data;
           res.render("fileNotFound");
         }*/
-    res.render('userprofile');
+    res.render('index');
         //});
 });
 

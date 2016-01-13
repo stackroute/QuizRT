@@ -13,42 +13,9 @@ db.once('open', function (callback) {
 );
 var Quiz = mongoose.model('Quiz', quizSchema, "quiz_questions_demo_collection");
 var quiz1 = new Quiz({
-  quizId: "3",
+  quizId: "akssan",
   multiplier: 3,
-  questions : [{
-                questionId:"1",
-                question:"Who of the following will head the Judicial Committee on One Rank One Pension (OROP) scheme?",
-                option1:"Y V Reddy",
-                option2:"L Narasimha Reddy",
-                option3:"Sanjay Mishra",
-                option4:"Wykrhm Reddy",
-                correctIndex:1,
-                image: "null"
-              },
-              {
-                questionId:"2",
-                question:"identify the personality",
-                option1:"SRK",
-                option2:"Amir",
-                option3:"Salman",
-                option4:"Akshay K",
-                option5: "None of the above",
-                correctIndex:4,
-                image: "images/questionImages/akshayk.jpg"
-              },
-              {
-                questionId:"3",
-                question:"what are you doing now?",
-                option1:"Reading",
-                option2:"Learning",
-                option3:"Listening",
-                option4: "Dancing",
-                option5: "Wasting Time",
-                option6: "Eating",
-                correctIndex:5,
-                image: "null"
-              }
-              ]
+  questions : ["567bd2e9728cf120076a0194","567bd2e9728cf120076a0193","567bd2e9728cf120076a0192","567bd2e9728cf120076a0191"]
 });
 
 quiz1.save(function(err){
